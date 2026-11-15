@@ -1,0 +1,471 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap');
+      text { font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
+      .title-navy { fill: #233560; font-weight: 800; }
+      .text-navy { fill: #233560; font-weight: 700; }
+      .text-dark { fill: #2c3547; font-weight: 500; }
+      .text-muted { fill: #526075; font-weight: 500; }
+    </style>
+
+    <filter id="soft-shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#1e2c4d" flood-opacity="0.08" />
+    </filter>
+  </defs>
+
+  <!-- 1. BASE CANVAS (Moldura Pastel Azul Acinzentada) -->
+  <rect width="1920" height="1080" fill="#cfdde4" />
+
+  <!-- Doodles Orgânicos de Fundo Externo (Estilo Canva Slide 11) -->
+  <g transform="translate(1620, -40)" stroke="#e7a469" stroke-width="9" fill="none" stroke-linecap="round" opacity="0.95">
+    <path d="M 40 100 C 90 60, 160 70, 210 110" />
+    <path d="M 20 135 C 80 90, 180 100, 240 150" />
+    <path d="M 50 170 C 110 130, 210 140, 280 190" />
+    <path d="M 80 205 C 140 170, 230 180, 310 230" />
+    <path d="M 120 240 C 180 210, 260 220, 330 270" />
+  </g>
+
+  <g transform="translate(950, 1010)" stroke="#9db580" stroke-width="8" fill="none" stroke-linecap="round" opacity="0.9">
+    <path d="M 0 0 C 60 -40, 160 -30, 220 10" />
+    <path d="M 30 25 C 90 -15, 190 -10, 260 30" />
+    <path d="M -20 30 C 50 -10, 140 -5, 200 45" />
+    <path d="M 60 50 C 120 15, 210 20, 280 60" />
+  </g>
+
+  <!-- 2. PLACA CENTRAL (Cartão Pérola/Creme Arredondado R=44) -->
+  <rect x="40" y="35" width="1840" height="1010" rx="44" ry="44" fill="#faf7ee" stroke="#ffffff" stroke-width="3" filter="url(#soft-shadow)" />
+
+  <!-- Manchas Decorativas / Pebbles no Cartão Central -->
+  <g transform="translate(710, 75)" opacity="0.85">
+    <circle cx="0" cy="0" r="14" fill="#cfdde4" />
+    <circle cx="28" cy="-12" r="7" fill="#cfdde4" />
+    <circle cx="16" cy="22" r="10" fill="#cfdde4" />
+    <circle cx="-22" cy="18" r="8" fill="#cfdde4" />
+    <circle cx="44" cy="15" r="5" fill="#e7a469" />
+  </g>
+  <g transform="translate(1800, 940)" opacity="0.85">
+    <circle cx="0" cy="0" r="16" fill="#cfdde4" />
+    <circle cx="28" cy="-14" r="9" fill="#cfdde4" />
+    <circle cx="20" cy="24" r="11" fill="#e7a469" />
+    <circle cx="-24" cy="12" r="7" fill="#cfdde4" />
+  </g>
+
+  <!-- 3. CABEÇALHO DO MAPA MENTAL -->
+  <g transform="translate(70, 55)">
+    <text x="0" y="38" class="title-navy" font-size="40" letter-spacing="-1">mapa mental</text>
+    <text x="0" y="64" class="text-navy" font-size="18" font-weight="800">HISTOLOGIA DO SISTEMA RESPIRATÓRIO</text>
+    <text x="0" y="84" class="text-muted" font-size="12">Organização Tecidual • Epitélio Pseudoestratificado Ciliado • Escalador Mucociliar • Fisiopatologia e Caso Clínico</text>
+
+    <!-- Autoria e Metadados à Direita (Perfeitamente Enquadrado) -->
+    <g transform="translate(1150, -2)">
+      <rect x="0" y="0" width="620" height="88" rx="16" fill="#f0eae1" stroke="#e4dacf" stroke-width="1.5" />
+      <text x="18" y="24" class="text-navy" font-size="11" font-weight="800" letter-spacing="0.5">AUTORIA DISCENTE &amp; COMPONENTE CURRICULAR (2º PERÍODO):</text>
+      <text x="18" y="44" class="text-dark" font-size="11">Nicole Vaz • Júlia Maina • Laura Almeida • Eloyse</text>
+      <text x="18" y="60" class="text-dark" font-size="11">Maria Luiza Senna • Fernanda Massaro • Roger Pacheco</text>
+      <text x="18" y="78" class="text-muted" font-size="10">Base Exclusiva: Junqueira &amp; Carneiro, Ross &amp; Pawlina, Tortora e Atlas (PUCRS, UNEB, UFG)</text>
+    </g>
+  </g>
+
+  <!-- ============================================================== -->
+  <!-- 4. NÓ CENTRAL: EIXO HISTOFISIOLÓGICO                           -->
+  <!-- ============================================================== -->
+  <g transform="translate(690, 422)">
+    <!-- Conectores Radiais -->
+    <path d="M 0 35 C -130 -40, -260 -80, -380 -95" fill="none" stroke="#8faec6" stroke-width="3.5" stroke-dasharray="6 6" />
+    <path d="M 0 115 C -130 170, -250 210, -380 230" fill="none" stroke="#9db580" stroke-width="3.5" stroke-dasharray="6 6" />
+    <path d="M 270 -20 C 270 -60, 270 -80, 270 -110" fill="none" stroke="#e7a469" stroke-width="3.5" stroke-dasharray="6 6" />
+    <path d="M 270 205 C 270 235, 270 255, 270 280" fill="none" stroke="#9db580" stroke-width="3.5" stroke-dasharray="6 6" />
+    <path d="M 540 35 C 650 -30, 720 -60, 800 -80" fill="none" stroke="#ceb2cf" stroke-width="3.5" stroke-dasharray="6 6" />
+    <path d="M 540 125 C 650 180, 720 215, 800 235" fill="none" stroke="#e29d62" stroke-width="3.5" stroke-dasharray="6 6" />
+
+    <rect x="-10" y="0" width="560" height="185" rx="28" ry="28" fill="#ffffff" stroke="#233560" stroke-width="3" filter="url(#soft-shadow)" />
+    <rect x="0" y="10" width="540" height="165" rx="20" ry="20" fill="#f7f9fb" stroke="#dbe4ed" stroke-width="1.5" />
+
+    <!-- Ilustração Vetorial dos Pulmões -->
+    <g transform="translate(25, 28)">
+      <path d="M 45 10 L 45 50" stroke="#8faec6" stroke-width="14" stroke-linecap="round" />
+      <line x1="39" y1="18" x2="51" y2="18" stroke="#ffffff" stroke-width="2.5" />
+      <line x1="39" y1="28" x2="51" y2="28" stroke="#ffffff" stroke-width="2.5" />
+      <line x1="39" y1="38" x2="51" y2="38" stroke="#ffffff" stroke-width="2.5" />
+      <path d="M 45 50 Q 30 65 15 78" fill="none" stroke="#8faec6" stroke-width="8" stroke-linecap="round" />
+      <path d="M 45 50 Q 60 65 75 78" fill="none" stroke="#8faec6" stroke-width="8" stroke-linecap="round" />
+      <path d="M 12 60 C -10 65, -15 110, 15 118 C 30 120, 35 95, 30 75 Z" fill="#f5b8b8" opacity="0.85" />
+      <path d="M 78 60 C 100 65, 105 110, 75 118 C 60 120, 55 95, 60 75 Z" fill="#f5b8b8" opacity="0.85" />
+      <path d="M 18 78 Q 5 88 8 102 M 18 78 Q 24 92 22 108" fill="none" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" />
+      <path d="M 72 78 Q 85 88 82 102 M 72 78 Q 66 92 68 108" fill="none" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" />
+    </g>
+
+    <g transform="translate(150, 26)">
+      <rect x="0" y="0" width="165" height="22" rx="6" fill="#e2ebf4" />
+      <text x="10" y="15" class="text-navy" font-size="10.5" font-weight="800" letter-spacing="0.5">EIXO HISTOFISIOLÓGICO</text>
+      <text x="0" y="42" class="title-navy" font-size="20">EPITÉLIO RESPIRATÓRIO</text>
+      <text x="0" y="62" class="text-navy" font-size="13">Pseudoestratificado Cilíndrico Ciliado</text>
+      <text x="0" y="78" class="text-navy" font-size="13">com Células Caliciformes</text>
+      <line x1="0" y1="88" x2="360" y2="88" stroke="#d8e2ec" stroke-width="1.5" />
+      <text x="0" y="106" class="text-dark" font-size="11">• Revestimento de condução, defesa física e condicionamento</text>
+      <text x="0" y="122" class="text-muted" font-size="10">Integração dos 4 tecidos: epitelial, conjuntivo, cartilaginoso/muscular e nervoso</text>
+    </g>
+  </g>
+
+  <!-- ============================================================== -->
+  <!-- MÓDULO 1: ÓRGÃOS E VIAS AÉREAS (SUPERIOR ESQUERDO)             -->
+  <!-- ============================================================== -->
+  <g transform="translate(70, 155)">
+    <rect x="0" y="0" width="480" height="355" rx="22" ry="22" fill="#d2dfea" stroke="#b4c8d8" stroke-width="1.5" filter="url(#soft-shadow)" />
+    
+    <rect x="18" y="14" width="310" height="32" rx="10" fill="#233560" />
+    <text x="32" y="35" fill="#ffffff" font-size="13.5" font-weight="700">1. ÓRGÃOS &amp; CONDICIONAMENTO DO AR</text>
+
+    <g transform="translate(20, 62)">
+      <circle cx="6" cy="8" r="4.5" fill="#e7a469" />
+      <text x="18" y="12" class="text-navy" font-size="12" font-weight="700">Fossas Nasais: <tspan class="text-dark" font-weight="500">filtram (vibrissas), aquecem e umidificam.</tspan></text>
+      <text x="18" y="26" class="text-muted" font-size="10.5">Conchas nasais geram fluxo turbilhonar p/ retenção de partículas.</text>
+
+      <circle cx="6" cy="48" r="4.5" fill="#e7a469" />
+      <text x="18" y="52" class="text-navy" font-size="12" font-weight="700">Nasofaringe: <tspan class="text-dark" font-weight="500">condução contínua do fluxo aéreo.</tspan></text>
+      <text x="18" y="66" class="text-muted" font-size="10.5">Continuidade do epitélio respiratório e tecido linfoide (MALT).</text>
+
+      <circle cx="6" cy="88" r="4.5" fill="#e7a469" />
+      <text x="18" y="92" class="text-navy" font-size="12" font-weight="700">Laringe: <tspan class="text-dark" font-weight="500">passagem do ar e fonação (pregas vocais).</tspan></text>
+      <text x="18" y="106" class="text-muted" font-size="10.5">Cartilagens hialinas (tireóidea/cricóidea) e elástica (epiglote).</text>
+
+      <circle cx="6" cy="128" r="4.5" fill="#e7a469" />
+      <text x="18" y="132" class="text-navy" font-size="12" font-weight="700">Traqueia: <tspan class="text-dark" font-weight="500">condução e depuração mucociliar contínua.</tspan></text>
+      <text x="18" y="146" class="text-muted" font-size="10.5">Arcabouço de 16 a 20 anéis cartilaginosos em "C" (hialina).</text>
+
+      <circle cx="6" cy="168" r="4.5" fill="#e7a469" />
+      <text x="18" y="172" class="text-navy" font-size="12" font-weight="700">Brônquios: <tspan class="text-dark" font-weight="500">distribuição do ar pelos lobos e segmentos.</tspan></text>
+      <text x="18" y="186" class="text-muted" font-size="10.5">Placas irregulares de cartilagem hialina e feixes de músculo liso.</text>
+
+      <circle cx="6" cy="208" r="4.5" fill="#e7a469" />
+      <text x="18" y="212" class="text-navy" font-size="12" font-weight="700">Bronquíolos: <tspan class="text-dark" font-weight="500">epitélio simples cilíndrico/cúbico ciliado.</tspan></text>
+      <text x="18" y="226" class="text-muted" font-size="10.5">Ausência de cartilagem e glândulas; redução de caliciformes.</text>
+    </g>
+
+    <rect x="18" y="322" width="444" height="22" rx="6" fill="#c3d5e3" />
+    <text x="26" y="337" class="text-navy" font-size="10" font-weight="700">Ref: Junqueira e Carneiro (2023); Tortora e Derrickson (2023)</text>
+  </g>
+
+  <!-- ============================================================== -->
+  <!-- MÓDULO 2: ORGANIZAÇÃO DOS 4 TECIDOS (INFERIOR ESQUERDO)        -->
+  <!-- ============================================================== -->
+  <g transform="translate(70, 528)">
+    <rect x="0" y="0" width="480" height="425" rx="22" ry="22" fill="#dce7cf" stroke="#bcd0a7" stroke-width="1.5" filter="url(#soft-shadow)" />
+    
+    <rect x="18" y="14" width="370" height="32" rx="10" fill="#2d5029" />
+    <text x="32" y="35" fill="#ffffff" font-size="13.5" font-weight="700">2. OS 4 TECIDOS DO SISTEMA RESPIRATÓRIO</text>
+
+    <!-- 4 Blocos Teciduais com Coordenadas Y Distintas e Exatas -->
+    <g transform="translate(18, 58)">
+      <!-- 1. Epitelial -->
+      <rect x="0" y="0" width="444" height="72" rx="12" fill="#ffffff" stroke="#cde0be" stroke-width="1.2" />
+      <text x="14" y="20" class="text-navy" font-size="12" font-weight="700">1. Tecido Epitelial (Mucosa):</text>
+      <text x="14" y="37" class="text-dark" font-size="10.5">• Reveste a luz e atua como barreira contra patógenos.</text>
+      <text x="14" y="53" class="text-dark" font-size="10.5">• Produz muco (caliciformes) e promove transporte ciliar.</text>
+      <circle cx="424" cy="20" r="6" fill="#8faec6" />
+
+      <!-- 2. Conjuntivo -->
+      <rect x="0" y="80" width="444" height="76" rx="12" fill="#ffffff" stroke="#cde0be" stroke-width="1.2" />
+      <text x="14" y="100" class="text-navy" font-size="12" font-weight="700">2. Tecido Conjuntivo (Lâmina Própria &amp; Submucosa):</text>
+      <text x="14" y="117" class="text-dark" font-size="10.5">• Lâmina própria: conjuntivo frouxo e plexos venosos térmicos.</text>
+      <text x="14" y="133" class="text-dark" font-size="10.5">• Submucosa: glândulas seromucosas (umidificação e lisozima).</text>
+      <circle cx="424" cy="100" r="6" fill="#e7a469" />
+
+      <!-- 3. Cartilaginoso/Muscular -->
+      <rect x="0" y="164" width="444" height="80" rx="12" fill="#ffffff" stroke="#cde0be" stroke-width="1.2" />
+      <text x="14" y="184" class="text-navy" font-size="12" font-weight="700">3. Tecidos Cartilaginoso e Muscular:</text>
+      <text x="14" y="201" class="text-dark" font-size="10.5">• Cartilagem Hialina: mantém a luz aberta (evita o colapso).</text>
+      <text x="14" y="217" class="text-dark" font-size="10.5">• Músculo Liso: regula o diâmetro e fluxo da via aérea.</text>
+      <circle cx="424" cy="184" r="6" fill="#9db580" />
+
+      <!-- 4. Nervoso -->
+      <rect x="0" y="252" width="444" height="74" rx="12" fill="#ffffff" stroke="#cde0be" stroke-width="1.2" />
+      <text x="14" y="272" class="text-navy" font-size="12" font-weight="700">4. Tecido Nervoso (Controle Autônomo &amp; Reflexos):</text>
+      <text x="14" y="289" class="text-dark" font-size="10.5">• Fibras sensitivas: deflagram reflexos de tosse e espirro.</text>
+      <text x="14" y="305" class="text-dark" font-size="10.5">• SNA: Simpático (broncodilata) e Parassimpático (contrai).</text>
+      <circle cx="424" cy="272" r="6" fill="#ceb2cf" />
+    </g>
+
+    <rect x="18" y="394" width="444" height="22" rx="6" fill="#cde0b8" />
+    <text x="26" y="409" class="text-navy" font-size="10" font-weight="700">Ref: Junqueira e Carneiro (2023); Tortora e Derrickson (2023)</text>
+  </g>
+
+  <!-- ============================================================== -->
+  <!-- MÓDULO 3: CITOLOGIA DO EPITÉLIO RESPIRATÓRIO (SUPERIOR CENTRO)  -->
+  <!-- ============================================================== -->
+  <g transform="translate(575, 155)">
+    <rect x="0" y="0" width="750" height="255" rx="22" ry="22" fill="#f6d2b3" stroke="#eab890" stroke-width="1.5" filter="url(#soft-shadow)" />
+    
+    <rect x="18" y="14" width="380" height="32" rx="10" fill="#803f13" />
+    <text x="32" y="35" fill="#ffffff" font-size="13.5" font-weight="700">3. TIPOS CELULARES DO EPITÉLIO RESPIRATÓRIO</text>
+
+    <g transform="translate(16, 56)">
+      <!-- CÉLULAS CILIADAS -->
+      <rect x="0" y="0" width="138" height="156" rx="12" fill="#ffffff" stroke="#eed1ba" stroke-width="1.2" />
+      <rect x="6" y="6" width="126" height="20" rx="6" fill="#8faec6" />
+      <text x="12" y="20" fill="#ffffff" font-size="10.5" font-weight="800">CÉLULAS CILIADAS</text>
+      <text x="8" y="40" class="text-dark" font-size="9.5" font-weight="700">• Cilíndricas altas</text>
+      <text x="8" y="54" class="text-dark" font-size="9">• Axonema <tspan font-weight="700">9+2</tspan> (9 pares</text>
+      <text x="8" y="66" class="text-dark" font-size="9">  periféricos + 2 centr.)</text>
+      <text x="8" y="80" class="text-dark" font-size="9">• <tspan font-weight="700">Braços de dineína</tspan></text>
+      <text x="8" y="94" class="text-dark" font-size="9">• Corpúsculos basais</text>
+      <text x="8" y="108" class="text-dark" font-size="9">• Ricas em mitocôndrias</text>
+      <line x1="8" y1="116" x2="130" y2="116" stroke="#f0e2d5" stroke-width="1" />
+      <text x="8" y="130" class="text-navy" font-size="9" font-weight="800">Função: bater muco</text>
+      <text x="8" y="142" class="text-navy" font-size="8.5">em onda metacrônica</text>
+
+      <!-- CÉLULAS CALICIFORMES -->
+      <rect x="144" y="0" width="138" height="156" rx="12" fill="#ffffff" stroke="#eed1ba" stroke-width="1.2" />
+      <rect x="150" y="6" width="126" height="20" rx="6" fill="#e7a469" />
+      <text x="160" y="20" fill="#ffffff" font-size="10.5" font-weight="800">CALICIFORMES</text>
+      <text x="152" y="40" class="text-dark" font-size="9.5" font-weight="700">• Formato de cálice</text>
+      <text x="152" y="54" class="text-dark" font-size="9">• Base estreita c/ núcleo</text>
+      <text x="152" y="66" class="text-dark" font-size="9">  e organelas basais</text>
+      <text x="152" y="80" class="text-dark" font-size="9">• Ápice bojudo c/</text>
+      <text x="152" y="92" class="text-dark" font-size="9">  <tspan font-weight="700">grânulos mucinogênio</tspan></text>
+      <text x="152" y="106" class="text-dark" font-size="9">• Exocitose de mucinas</text>
+      <line x1="152" y1="116" x2="274" y2="116" stroke="#f0e2d5" stroke-width="1" />
+      <text x="152" y="130" class="text-navy" font-size="9" font-weight="800">Função: formar muco</text>
+      <text x="152" y="142" class="text-navy" font-size="8.5">p/ capturar partículas</text>
+
+      <!-- CÉLULAS BASAIS -->
+      <rect x="288" y="0" width="138" height="156" rx="12" fill="#ffffff" stroke="#eed1ba" stroke-width="1.2" />
+      <rect x="294" y="6" width="126" height="20" rx="6" fill="#9db580" />
+      <text x="306" y="20" fill="#ffffff" font-size="10.5" font-weight="800">CÉLULAS BASAIS</text>
+      <text x="296" y="40" class="text-dark" font-size="9.5" font-weight="700">• Pequenas, basais</text>
+      <text x="296" y="54" class="text-dark" font-size="9">• Sobre a lâmina basal</text>
+      <text x="296" y="68" class="text-dark" font-size="9">• <tspan font-weight="700">Não atingem</tspan> a luz</text>
+      <text x="296" y="82" class="text-dark" font-size="9">• <tspan font-weight="700">Células-tronco</tspan></text>
+      <text x="296" y="96" class="text-dark" font-size="9">• Alta taxa mitótica</text>
+      <text x="296" y="108" class="text-dark" font-size="9">• Reposição epitelial</text>
+      <line x1="296" y1="116" x2="418" y2="116" stroke="#f0e2d5" stroke-width="1" />
+      <text x="296" y="130" class="text-navy" font-size="9" font-weight="800">Função: renovar todo</text>
+      <text x="296" y="142" class="text-navy" font-size="8.5">o epitélio respiratório</text>
+
+      <!-- CÉLULAS EM ESCOVA -->
+      <rect x="432" y="0" width="138" height="156" rx="12" fill="#ffffff" stroke="#eed1ba" stroke-width="1.2" />
+      <rect x="438" y="6" width="126" height="20" rx="6" fill="#ceb2cf" />
+      <text x="444" y="20" fill="#ffffff" font-size="10.5" font-weight="800">CÉLULA EM ESCOVA</text>
+      <text x="440" y="40" class="text-dark" font-size="9.5" font-weight="700">• Cilíndricas estreitas</text>
+      <text x="440" y="54" class="text-dark" font-size="9">• Microvilosidades</text>
+      <text x="440" y="66" class="text-dark" font-size="9">  apicais rombas</text>
+      <text x="440" y="80" class="text-dark" font-size="9">• Sinapses c/ fibras</text>
+      <text x="440" y="92" class="text-dark" font-size="9">  nervosas na base</text>
+      <text x="440" y="106" class="text-dark" font-size="9">• Quimiorreceptoras</text>
+      <line x1="440" y1="116" x2="562" y2="116" stroke="#f0e2d5" stroke-width="1" />
+      <text x="440" y="130" class="text-navy" font-size="9" font-weight="800">Função: detectar</text>
+      <text x="440" y="142" class="text-navy" font-size="8.5">estímulos químicos</text>
+
+      <!-- CÉLULAS NEUROENDÓCRINAS -->
+      <rect x="576" y="0" width="138" height="156" rx="12" fill="#ffffff" stroke="#eed1ba" stroke-width="1.2" />
+      <rect x="582" y="6" width="126" height="20" rx="6" fill="#e29d62" />
+      <text x="590" y="20" fill="#ffffff" font-size="10.5" font-weight="800">NEUROENDÓCRINAS</text>
+      <text x="584" y="40" class="text-dark" font-size="9.5" font-weight="700">• Células Kulchitsky</text>
+      <text x="584" y="54" class="text-dark" font-size="9">• <tspan font-weight="700">Grânulos secretores</tspan></text>
+      <text x="584" y="66" class="text-dark" font-size="9">  densos na base</text>
+      <text x="584" y="80" class="text-dark" font-size="9">• Integrantes do SNED</text>
+      <text x="584" y="94" class="text-dark" font-size="9">• Secreção parácrina</text>
+      <text x="584" y="106" class="text-dark" font-size="9">  (aminas e peptídeos)</text>
+      <line x1="584" y1="116" x2="706" y2="116" stroke="#f0e2d5" stroke-width="1" />
+      <text x="584" y="130" class="text-navy" font-size="9" font-weight="800">Função: regular tônus</text>
+      <text x="584" y="142" class="text-navy" font-size="8.5">muscular e vascular</text>
+    </g>
+
+    <rect x="18" y="224" width="714" height="20" rx="6" fill="#edd6c4" />
+    <text x="26" y="238" class="text-navy" font-size="10" font-weight="700">Ref: Junqueira e Carneiro (2013)</text>
+  </g>
+
+  <!-- ============================================================== -->
+  <!-- MÓDULO 4: RELAÇÃO ESTRUTURA-FUNÇÃO (INFERIOR CENTRO)           -->
+  <!-- ============================================================== -->
+  <g transform="translate(575, 626)">
+    <rect x="0" y="0" width="750" height="326" rx="22" ry="22" fill="#e5eedb" stroke="#bcd0a7" stroke-width="1.5" filter="url(#soft-shadow)" />
+    
+    <rect x="18" y="14" width="440" height="32" rx="10" fill="#2d5029" />
+    <text x="32" y="35" fill="#ffffff" font-size="13.5" font-weight="700">4. RELAÇÃO ESTRUTURA-FUNÇÃO &amp; ESCALADOR MUCOCILIAR</text>
+
+    <g transform="translate(18, 56)">
+      <!-- 1. Camada Dupla -->
+      <rect x="0" y="0" width="226" height="232" rx="12" fill="#ffffff" stroke="#cde0be" stroke-width="1.2" />
+      <text x="12" y="22" class="text-navy" font-size="12" font-weight="800">SISTEMA BIFÁSICO DE MUCO</text>
+      
+      <rect x="10" y="32" width="206" height="74" rx="8" fill="#fdf0e6" stroke="#f2ccb1" stroke-width="1" />
+      <text x="18" y="50" class="text-navy" font-size="11" font-weight="800">FASE GEL (Superficial):</text>
+      <text x="18" y="66" class="text-dark" font-size="10">• Muco viscoso e adesivo.</text>
+      <text x="18" y="80" class="text-dark" font-size="10">• Aprisiona poeiras e micróbios.</text>
+      <text x="18" y="94" class="text-muted" font-size="9.5">Produzido por caliciformes e glândulas.</text>
+
+      <rect x="10" y="114" width="206" height="78" rx="8" fill="#e9f3f9" stroke="#b9d9ec" stroke-width="1" />
+      <text x="18" y="132" class="text-navy" font-size="11" font-weight="800">FASE SOL (Periciliar Profunda):</text>
+      <text x="18" y="148" class="text-dark" font-size="10">• Fluido aquoso menos viscoso.</text>
+      <text x="18" y="162" class="text-dark" font-size="10">• Banha os cílios p/ batimento livre.</text>
+      <text x="18" y="176" class="text-muted" font-size="9.5">Elimina o atrito mecânico das hastes.</text>
+
+      <text x="12" y="214" class="text-navy" font-size="9.5" font-weight="700">Barreira física e imunológica contínua</text>
+
+      <!-- 2. Transporte Metacrônico -->
+      <g transform="translate(236, 0)">
+        <rect x="0" y="0" width="270" height="232" rx="12" fill="#ffffff" stroke="#cde0be" stroke-width="1.2" />
+        <text x="14" y="22" class="text-navy" font-size="12" font-weight="800">DINÂMICA DO TRANSPORTE</text>
+        
+        <g transform="translate(14, 30)">
+          <!-- Camada Gel -->
+          <rect x="0" y="0" width="242" height="20" rx="5" fill="#e7a469" opacity="0.9" />
+          <circle cx="20" cy="10" r="2.5" fill="#233560" />
+          <circle cx="60" cy="9" r="2" fill="#233560" />
+          <circle cx="120" cy="11" r="3" fill="#233560" />
+          <circle cx="180" cy="8" r="2.5" fill="#233560" />
+          <circle cx="220" cy="10" r="2" fill="#233560" />
+          <text x="75" y="14" fill="#ffffff" font-size="9" font-weight="800">Partículas retidas na Fase Gel</text>
+
+          <!-- Seta Metacrônica -->
+          <path d="M 15 34 Q 120 22 215 32 L 208 26 M 215 32 L 207 38" fill="none" stroke="#d94343" stroke-width="3" stroke-linecap="round" />
+          <text x="35" y="46" fill="#d94343" font-size="9.5" font-weight="800">Onda Metacrônica (em direção à faringe)</text>
+
+          <!-- Fase Sol com Cílios -->
+          <rect x="0" y="54" width="242" height="48" rx="4" fill="#dbeef9" opacity="0.6" />
+          <path d="M 15 102 C 18 86, 30 72, 38 58" fill="none" stroke="#233560" stroke-width="3" stroke-linecap="round" />
+          <path d="M 40 102 C 46 84, 60 70, 70 58" fill="none" stroke="#233560" stroke-width="3" stroke-linecap="round" />
+          <path d="M 65 102 C 72 82, 88 68, 102 58" fill="none" stroke="#233560" stroke-width="3" stroke-linecap="round" />
+          <path d="M 90 102 C 98 82, 116 68, 134 58" fill="none" stroke="#233560" stroke-width="3" stroke-linecap="round" />
+          <path d="M 115 102 C 124 82, 144 68, 166 58" fill="none" stroke="#233560" stroke-width="3" stroke-linecap="round" />
+          <path d="M 140 102 C 150 82, 172 68, 196 58" fill="none" stroke="#233560" stroke-width="3" stroke-linecap="round" />
+          <path d="M 165 102 C 176 82, 198 68, 226 58" fill="none" stroke="#233560" stroke-width="3" stroke-linecap="round" />
+
+          <!-- Superfície Celular -->
+          <rect x="0" y="102" width="242" height="30" rx="4" fill="#e2eddb" />
+          <circle cx="15" cy="106" r="2.5" fill="#803f13" />
+          <circle cx="40" cy="106" r="2.5" fill="#803f13" />
+          <circle cx="65" cy="106" r="2.5" fill="#803f13" />
+          <circle cx="90" cy="106" r="2.5" fill="#803f13" />
+          <circle cx="115" cy="106" r="2.5" fill="#803f13" />
+          <circle cx="140" cy="106" r="2.5" fill="#803f13" />
+          <circle cx="165" cy="106" r="2.5" fill="#803f13" />
+          <text x="45" y="122" class="text-navy" font-size="9" font-weight="700">Corpúsculos basais e citoplasma apical</text>
+        </g>
+        
+        <text x="14" y="200" class="text-dark" font-size="9.5">• Movimento unidirecional ascendente</text>
+        <text x="14" y="215" class="text-muted" font-size="9">• Eliminação final por expectoração ou deglutição</text>
+      </g>
+
+      <!-- 3. Integração Vascular -->
+      <g transform="translate(516, 0)">
+        <rect x="0" y="0" width="198" height="232" rx="12" fill="#ffffff" stroke="#cde0be" stroke-width="1.2" />
+        <text x="12" y="22" class="text-navy" font-size="11.5" font-weight="800">INTEGRAÇÃO VASCULAR</text>
+        
+        <rect x="8" y="32" width="182" height="74" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1" />
+        <text x="14" y="48" class="text-navy" font-size="10.5" font-weight="800">Plexos Venosos:</text>
+        <text x="14" y="64" class="text-dark" font-size="9.5">• Aquecimento do ar por</text>
+        <text x="14" y="76" class="text-dark" font-size="9.5">  fluxo contracorrente.</text>
+        <text x="14" y="90" class="text-muted" font-size="9">• Evita choque alveolar.</text>
+
+        <rect x="8" y="114" width="182" height="78" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1" />
+        <text x="14" y="130" class="text-navy" font-size="10.5" font-weight="800">Glândulas Seromucosas:</text>
+        <text x="14" y="146" class="text-dark" font-size="9.5">• Umidificação a 100%.</text>
+        <text x="14" y="158" class="text-dark" font-size="9.5">• Secreção de lisozima e IgA.</text>
+        <text x="14" y="172" class="text-muted" font-size="9">• Ação bactericida local.</text>
+
+        <text x="12" y="214" class="text-navy" font-size="9.5" font-weight="800">Condicionamento térmico</text>
+      </g>
+    </g>
+
+    <rect x="18" y="296" width="714" height="20" rx="6" fill="#d2e2c4" />
+    <text x="26" y="310" class="text-navy" font-size="10" font-weight="700">Ref: Junqueira e Carneiro (2017); Ross e Pawlina (2016)</text>
+  </g>
+
+  <!-- ============================================================== -->
+  <!-- MÓDULO 5: FISIOPATOLOGIA & SÍNDROME DE KARTAGENER (SUPERIOR DIR)-->
+  <!-- ============================================================== -->
+  <g transform="translate(1345, 155)">
+    <rect x="0" y="0" width="500" height="365" rx="22" ry="22" fill="#fae1ce" stroke="#e8bda0" stroke-width="1.5" filter="url(#soft-shadow)" />
+    
+    <rect x="18" y="14" width="410" height="32" rx="10" fill="#883b16" />
+    <text x="32" y="35" fill="#ffffff" font-size="13.5" font-weight="700">5. FISIOPATOLOGIA &amp; SÍNDROME DE KARTAGENER</text>
+
+    <g transform="translate(18, 54)">
+      <!-- Fisiopatologia e Dineína -->
+      <rect x="0" y="0" width="464" height="152" rx="12" fill="#ffffff" stroke="#f0cfb9" stroke-width="1.2" />
+      <text x="14" y="20" class="text-navy" font-size="11.5" font-weight="800">DISCINESIA CILIAR PRIMÁRIA (DCP):</text>
+      <text x="14" y="36" class="text-dark" font-size="10.5">• <tspan font-weight="700">Causa genética:</tspan> defeito estrutural nos <tspan font-weight="700" fill="#c53030">braços de dineína</tspan>.</text>
+      <text x="14" y="50" class="text-dark" font-size="10.5">• <tspan font-weight="700">Ultraestrutura:</tspan> ausência das ATPases motoras no axonema 9+2.</text>
+      <text x="14" y="64" class="text-dark" font-size="10.5">• <tspan font-weight="700">Consequência:</tspan> cílios perdem motilidade eficaz e sincronizada.</text>
+      <text x="14" y="78" class="text-dark" font-size="10.5">• <tspan font-weight="700">Fisiopatologia:</tspan> falha da depuração mucociliar e estase de muco.</text>
+      <text x="14" y="92" class="text-dark" font-size="10.5">• <tspan font-weight="700">Manifestações:</tspan> tosse crônica produtiva, sinusites e bronquites.</text>
+      <text x="14" y="108" class="text-muted" font-size="9.5">Ausência do escalador mucociliar favorece retenção de patógenos.</text>
+      <circle cx="440" cy="20" r="6" fill="#e7a469" />
+
+      <!-- Tríade Clássica de Kartagener Ampliada e Detalhada -->
+      <g transform="translate(0, 120)">
+        <rect x="0" y="0" width="464" height="150" rx="12" fill="#ffffff" stroke="#f0cfb9" stroke-width="1.2" />
+        <rect x="12" y="10" width="260" height="20" rx="6" fill="#fef2e8" stroke="#f5c7a9" stroke-width="1" />
+        <text x="20" y="24" fill="#9c4221" font-size="10.5" font-weight="800">TRÍADE CLÁSSICA DE KARTAGENER:</text>
+        <text x="14" y="48" class="text-dark" font-size="10.5">• <tspan font-weight="700" fill="#233560">1. Sinusite Crônica:</tspan> inflamação e infecção persistente dos seios da face.</text>
+        <text x="14" y="66" class="text-dark" font-size="10.5">• <tspan font-weight="700" fill="#233560">2. Bronquiectasias:</tspan> dilatações irreversíveis das vias aéreas brônquicas.</text>
+        <text x="14" y="84" class="text-dark" font-size="10.5">• <tspan font-weight="700" fill="#233560">3. Situs Inversus:</tspan> inversão da posição dos órgãos torácicos/abdominais.</text>
+        <line x1="14" y1="96" x2="450" y2="96" stroke="#f0cfb9" stroke-width="1" />
+        <text x="14" y="112" class="text-muted" font-size="9.5">*O Situs Inversus decorre da ausência de batimento ciliar ativo</text>
+        <text x="14" y="126" class="text-muted" font-size="9.5">  no nódulo embrionário durante a determinação da lateralidade corporal.</text>
+      </g>
+    </g>
+
+    <rect x="18" y="337" width="464" height="20" rx="6" fill="#edd0bd" />
+    <text x="26" y="351" class="text-navy" font-size="10" font-weight="700">Ref: Ross e Pawlina (2016); Tortora e Derrickson (2023)</text>
+  </g>
+
+  <!-- ============================================================== -->
+  <!-- MÓDULO 6: CASO CLÍNICO & DISCUSSÃO (INFERIOR DIREITO)           -->
+  <!-- ============================================================== -->
+  <g transform="translate(1345, 538)">
+    <rect x="0" y="0" width="500" height="415" rx="22" ry="22" fill="#ebd0de" stroke="#d5b5c6" stroke-width="1.5" filter="url(#soft-shadow)" />
+    
+    <rect x="18" y="14" width="410" height="32" rx="10" fill="#5c2445" />
+    <text x="32" y="35" fill="#ffffff" font-size="13.5" font-weight="700">6. CASO CLÍNICO &amp; DISCUSSÃO (SLIDES 8 E 9)</text>
+
+    <g transform="translate(18, 54)">
+      <!-- História Pediátrica -->
+      <rect x="0" y="0" width="464" height="96" rx="12" fill="#ffffff" stroke="#dec0cf" stroke-width="1.2" />
+      <rect x="10" y="8" width="200" height="18" rx="5" fill="#e9d3df" />
+      <text x="16" y="21" class="text-navy" font-size="10.5" font-weight="800">CASO CLÍNICO PEDIÁTRICO</text>
+      <text x="14" y="42" class="text-dark" font-size="10">• <tspan font-weight="700">Histórico:</tspan> Criança de 7 anos c/ sinusite frequente, tosse produtiva</text>
+      <text x="14" y="56" class="text-dark" font-size="10">  e infecções pulmonares recorrentes desde os primeiros meses de vida.</text>
+      <text x="14" y="72" class="text-dark" font-size="10">• <tspan font-weight="700">Exame Médico:</tspan> alteração congênita nos braços de dineína ciliar.</text>
+      <text x="14" y="88" class="text-muted" font-size="9">Cílios não batem de forma adequada, retendo muco e microrganismos.</text>
+
+      <!-- As 4 Perguntas e Resoluções Integradas -->
+      <g transform="translate(0, 106)">
+        <rect x="0" y="0" width="464" height="218" rx="12" fill="#ffffff" stroke="#dec0cf" stroke-width="1.2" />
+        <rect x="10" y="8" width="250" height="18" rx="5" fill="#e9d3df" />
+        <text x="16" y="21" class="text-navy" font-size="10.5" font-weight="800">RESPOSTAS INTEGRADAS ÀS 4 QUESTÕES</text>
+        
+        <text x="14" y="44" class="text-dark" font-size="9.5"><tspan font-weight="800" fill="#233560">Q1:</tspan> Células ciliadas transportam ativamente o muco; células</text>
+        <text x="14" y="58" class="text-dark" font-size="9.5">    caliciformes produzem e secretam o muco protetor adesivo.</text>
+
+        <text x="14" y="78" class="text-dark" font-size="9.5"><tspan font-weight="800" fill="#233560">Q2:</tspan> A dineína é a ATPase motora que gera o deslizamento de</text>
+        <text x="14" y="92" class="text-dark" font-size="9.5">    microtúbulos; sem ela, o batimento ciliar é suprimido ou ineficaz.</text>
+
+        <text x="14" y="112" class="text-dark" font-size="9.5"><tspan font-weight="800" fill="#233560">Q3:</tspan> Sem depuração mucociliar, o muco espesso fica estagnado,</text>
+        <text x="14" y="126" class="text-dark" font-size="9.5">    tornando-se meio de cultura ideal para proliferação bacteriana.</text>
+
+        <text x="14" y="146" class="text-dark" font-size="9.5"><tspan font-weight="800" fill="#233560">Q4:</tspan> Diagnóstico Sindrômico: <tspan font-weight="800" fill="#883b16">Discinesia Ciliar Primária (DCP)</tspan> /</text>
+        <text x="14" y="160" class="text-dark" font-size="9.5">    forma com situs inversus denominada <tspan font-weight="800" fill="#883b16">Síndrome de Kartagener</tspan>.</text>
+
+        <line x1="14" y1="174" x2="450" y2="174" stroke="#dec0cf" stroke-width="1" />
+        <text x="14" y="192" class="text-navy" font-size="9.5" font-weight="700">• Integração didática: citologia, fisiologia, genética e clínica médica</text>
+        <text x="14" y="206" class="text-muted" font-size="8.5">Resolução completa dos objetivos de aprendizagem do seminário</text>
+      </g>
+    </g>
+
+    <rect x="18" y="386" width="464" height="20" rx="6" fill="#dcbccf" />
+    <text x="26" y="400" class="text-navy" font-size="10" font-weight="700">Ref: Junqueira e Carneiro (2023); Ross e Pawlina (2016)</text>
+  </g>
+
+  <!-- ============================================================== -->
+  <!-- 7. RODAPÉ NORMATIVO INFERIOR                                    -->
+  <!-- ============================================================== -->
+  <g transform="translate(70, 988)">
+    <rect x="0" y="0" width="1775" height="42" rx="12" fill="#233560" />
+    <text x="20" y="18" fill="#ffffff" font-size="10.5" font-weight="800" letter-spacing="0.5">FONTES BIBLIOGRÁFICAS NORMATIVAS EXCLUSIVAS:</text>
+    <text x="20" y="32" fill="#cfdde4" font-size="9">Junqueira &amp; Carneiro (12ª ed. 2013, 13ª ed. 2017, 14ª ed. 2023) • Ross &amp; Pawlina (7ª ed. 2016) • Tortora &amp; Derrickson (16ª ed. 2023) • Atlas PUCRS • Atlas UNEB • Atlas UFG (2020)</text>
+  </g>
+</svg>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Histologia do Sistema Respiratório - Hub do Projeto</title>
+  <script src="https://www.gstatic.com/antigravity/web/dev/tailwindcss.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background-color: #cfdde4;
+      color: #233560;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+    }
+    .hover-card {
+      transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .hover-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 28px -6px rgba(35, 53, 96, 0.15);
+    }
+  </style>
+</head>
+<body class="p-4 sm:p-8 flex flex-col justify-between items-center min-h-screen">
+
+  <div class="max-w-4xl w-full my-auto space-y-6">
+
+    <!-- Header Card -->
+    <header class="bg-[#faf7ee] rounded-3xl p-6 sm:p-8 shadow-sm border border-white/80 text-center relative overflow-hidden">
+      <!-- Doodles -->
+      <div class="absolute -top-10 -right-10 w-32 h-32 opacity-30 pointer-events-none">
+        <svg viewBox="0 0 100 100" fill="none"><circle cx="50" cy="50" r="40" stroke="#e7a469" stroke-width="8"/></svg>
+      </div>
+      <div class="absolute -bottom-10 -left-10 w-32 h-32 opacity-30 pointer-events-none">
+        <svg viewBox="0 0 100 100" fill="none"><circle cx="50" cy="50" r="40" stroke="#9db580" stroke-width="8"/></svg>
+      </div>
+
+      <div class="inline-flex items-center gap-2 bg-[#d2dfea] text-[#233560] px-3.5 py-1 rounded-full text-xs font-black uppercase tracking-wider mb-3">
+        Histologia Médica • 2º Período
+      </div>
+      
+      <h1 class="text-2xl sm:text-4xl font-black text-[#233560] tracking-tight">
+        Histologia do Sistema Respiratório
+      </h1>
+      
+      <p class="text-sm sm:text-base text-[#4a5873] font-medium max-w-2xl mx-auto mt-2 leading-relaxed">
+        Organização Tecidual, Epitélio Pseudoestratificado Cilíndrico Ciliado, Citologia Ultraestrutural, Escalador Mucociliar e Aplicação Clínica (Síndrome de Kartagener).
+      </p>
+
+      <div class="mt-4 pt-4 border-t border-[#233560]/10 text-xs font-bold text-[#883b16]">
+        Nicole Vaz • Júlia Maina • Laura Almeida • Eloyse • Maria Luiza Senna • Fernanda Massaro • Roger Pacheco
+      </div>
+    </header>
+
+    <!-- Navigation Hub Cards -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+      
+      <!-- Card 1: Mapa Mental -->
+      <a href="mapa_mental_sistema_respiratorio.html" class="hover-card bg-[#faf7ee] rounded-3xl p-6 sm:p-7 border border-white/80 shadow-sm flex flex-col justify-between group">
+        <div class="space-y-3">
+          <div class="w-12 h-12 rounded-2xl bg-[#d2dfea] flex items-center justify-center text-2xl group-hover:scale-110 transition">
+            🫁
+          </div>
+          <div>
+            <span class="text-[11px] font-extrabold uppercase tracking-wider text-[#1f2d5a] bg-[#d2dfea]/70 px-2.5 py-0.5 rounded-full">
+              Prancha Visual Vetorial
+            </span>
+            <h2 class="text-xl font-black text-[#233560] mt-1 group-hover:text-[#1b2a4d]">
+              Mapa Mental Completo
+            </h2>
+            <p class="text-xs sm:text-sm text-[#4a5873] mt-1.5 leading-relaxed font-medium">
+              Apresentação panorâmica 16:9 ilustrada com todos os 6 eixos conceituais, citologia dos 5 tipos celulares, escalador mucociliar e fisiopatologia. Inclui download em SVG e PNG 4K.
+            </p>
+          </div>
+        </div>
+        <div class="mt-5 pt-3 border-t border-[#233560]/10 flex items-center justify-between text-xs font-extrabold text-[#233560]">
+          <span>Abrir Mapa Mental</span>
+          <span class="group-hover:translate-x-1 transition">→</span>
+        </div>
+      </a>
+
+      <!-- Card 2: Perguntas para Sala -->
+      <a href="perguntas_interativas_respiratorio.html" class="hover-card bg-[#faf7ee] rounded-3xl p-6 sm:p-7 border border-white/80 shadow-sm flex flex-col justify-between group">
+        <div class="space-y-3">
+          <div class="w-12 h-12 rounded-2xl bg-[#fae1ce] flex items-center justify-center text-2xl group-hover:scale-110 transition">
+            💡
+          </div>
+          <div>
+            <span class="text-[11px] font-extrabold uppercase tracking-wider text-[#883b16] bg-[#fae1ce]/70 px-2.5 py-0.5 rounded-full">
+              Dinâmica de Projeção
+            </span>
+            <h2 class="text-xl font-black text-[#233560] mt-1 group-hover:text-[#883b16]">
+              Perguntas para a Sala
+            </h2>
+            <p class="text-xs sm:text-sm text-[#4a5873] mt-1.5 leading-relaxed font-medium">
+              Módulo interativo para condução de atividade em aula. Contém as Questões 1 e 2 com justificativas ocultas por padrão, gabarito interativo, temporizador e votação da turma.
+            </p>
+          </div>
+        </div>
+        <div class="mt-5 pt-3 border-t border-[#233560]/10 flex items-center justify-between text-xs font-extrabold text-[#883b16]">
+          <span>Abrir Dinâmica Interativa</span>
+          <span class="group-hover:translate-x-1 transition">→</span>
+        </div>
+      </a>
+
+      <!-- Card 3: Guia Teórico Markdown -->
+      <a href="guia_estudos_histologia_respiratoria.md" class="hover-card bg-[#faf7ee] rounded-3xl p-5 sm:p-6 border border-white/80 shadow-sm flex items-center justify-between group">
+        <div class="flex items-center gap-3.5">
+          <div class="w-10 h-10 rounded-xl bg-[#dce7cf] text-[#2d5029] flex items-center justify-center text-xl shrink-0">
+            📖
+          </div>
+          <div>
+            <h3 class="text-sm font-extrabold text-[#233560] group-hover:text-[#2d5029]">
+              Guia Teórico &amp; Fundamentação
+            </h3>
+            <p class="text-xs text-[#526075]">
+              Documento completo em Markdown com diagramas Mermaid e detalhes ultraestruturais.
+            </p>
+          </div>
+        </div>
+        <span class="text-[#233560] font-black text-sm group-hover:translate-x-1 transition">→</span>
+      </a>
+
+      <!-- Card 4: Vetor SVG Puro -->
+      <a href="mapa_mental_sistema_respiratorio.svg" target="_blank" class="hover-card bg-[#faf7ee] rounded-3xl p-5 sm:p-6 border border-white/80 shadow-sm flex items-center justify-between group">
+        <div class="flex items-center gap-3.5">
+          <div class="w-10 h-10 rounded-xl bg-[#ebd0de] text-[#5c2445] flex items-center justify-center text-xl shrink-0">
+            🎨
+          </div>
+          <div>
+            <h3 class="text-sm font-extrabold text-[#233560] group-hover:text-[#5c2445]">
+              Arquivo Vetorial SVG (1920x1080)
+            </h3>
+            <p class="text-xs text-[#526075]">
+              Vetor puro escalável sem perda de resolução para impressão ou slides.
+            </p>
+          </div>
+        </div>
+        <span class="text-[#233560] font-black text-sm group-hover:translate-x-1 transition">→</span>
+      </a>
+
+    </div>
+
+    <!-- Rodapé -->
+    <footer class="text-center text-xs text-[#526075] space-y-1">
+      <p>Base bibliográfica exclusiva: Junqueira &amp; Carneiro (12ª, 13ª, 14ª ed.), Ross &amp; Pawlina (7ª ed.), Tortora &amp; Derrickson (16ª ed.) e Atlas de Histologia (PUCRS, UNEB, UFG).</p>
+      <p class="font-semibold text-[#233560]">&copy; 2026 • Componente de Histologia Médica</p>
+    </footer>
+
+  </div>
+
+</body>
+</html>

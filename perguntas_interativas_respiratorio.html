@@ -1,0 +1,1071 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perguntas para a Sala: Histologia do Sistema Respiratório</title>
+  <script src="https://www.gstatic.com/antigravity/web/dev/tailwindcss.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-frame: #cfdde4;
+      --card-cream: #faf7ee;
+      --navy-primary: #233560;
+      --sage-green: #9db580;
+      --sage-bg: #dce7cf;
+      --sage-dark: #2d5029;
+      --terracotta: #e7a469;
+      --terracotta-bg: #fae1ce;
+      --terracotta-dark: #883b16;
+      --sky-blue: #d2dfea;
+      --mauve: #ebd0de;
+      --mauve-dark: #5c2445;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background-color: var(--bg-frame);
+      color: var(--navy-primary);
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Organic fingerprint doodles like Canva Slide 11 */
+    .doodle-bg {
+      position: fixed;
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.85;
+    }
+
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 7px;
+      height: 7px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background-color: #9bb8c7;
+      border-radius: 9999px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    /* Alternative button hover & transitions */
+    .option-btn {
+      transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .option-btn:hover:not(.locked) {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px -4px rgba(35, 53, 96, 0.12);
+    }
+    .option-btn:active:not(.locked) {
+      transform: translateY(0);
+    }
+
+    /* Justification accordion animation */
+    .justification-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.45s cubic-bezier(0, 1, 0, 1), opacity 0.3s ease;
+      opacity: 0;
+    }
+    .justification-content.open {
+      max-height: 2500px;
+      transition: max-height 0.6s ease-in-out, opacity 0.4s ease;
+      opacity: 1;
+    }
+
+    /* Badge pulse */
+    @keyframes pulse-subtle {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.04); }
+    }
+    .animate-pulse-subtle {
+      animation: pulse-subtle 2.2s infinite ease-in-out;
+    }
+
+    /* Print styles */
+    @media print {
+      body { background: white !important; color: black !important; }
+      .doodle-bg, .no-print { display: none !important; }
+      .justification-content { max-height: none !important; opacity: 1 !important; display: block !important; }
+    }
+  </style>
+</head>
+<body class="p-3 sm:p-6 lg:p-8 relative custom-scrollbar flex flex-col justify-between">
+
+  <!-- ========================================== -->
+  <!-- DOODLES ORGÂNICOS DE FUNDO (ESTILO SLIDE 11)-->
+  <!-- ========================================== -->
+  <svg class="doodle-bg -top-12 -right-12 w-64 h-64 sm:w-80 sm:h-80" viewBox="0 0 200 200" fill="none">
+    <path d="M140 20 C180 30, 190 70, 180 110 C170 150, 140 180, 100 180" stroke="#e7a469" stroke-width="14" stroke-linecap="round" fill="none" opacity="0.6"/>
+    <path d="M125 35 C155 45, 165 75, 155 105 C145 135, 125 155, 95 155" stroke="#e7a469" stroke-width="10" stroke-linecap="round" fill="none" opacity="0.75"/>
+    <path d="M110 50 C130 60, 140 80, 130 100 C120 120, 105 130, 85 130" stroke="#e7a469" stroke-width="8" stroke-linecap="round" fill="none" opacity="0.85"/>
+  </svg>
+
+  <svg class="doodle-bg -bottom-16 -left-16 w-72 h-72 sm:w-96 sm:h-96" viewBox="0 0 220 220" fill="none">
+    <path d="M40 160 C30 120, 50 70, 90 50 C130 30, 170 60, 180 100" stroke="#9db580" stroke-width="16" stroke-linecap="round" fill="none" opacity="0.55"/>
+    <path d="M55 145 C50 115, 65 80, 95 65 C125 50, 155 75, 160 105" stroke="#9db580" stroke-width="11" stroke-linecap="round" fill="none" opacity="0.7"/>
+    <path d="M70 130 C65 110, 80 90, 100 80 C120 70, 140 90, 145 110" stroke="#9db580" stroke-width="8" stroke-linecap="round" fill="none" opacity="0.8"/>
+  </svg>
+
+  <!-- ========================================== -->
+  <!-- CONTAINER PRINCIPAL                        -->
+  <!-- ========================================== -->
+  <main class="max-w-6xl mx-auto w-full z-10 relative space-y-5">
+
+    <!-- CABEÇALHO DA ATIVIDADE EM SALA -->
+    <header class="bg-[#faf7ee] rounded-3xl p-5 sm:p-6 shadow-sm border border-white/80 flex flex-col md:flex-row md:items-center justify-between gap-4">
+      <div class="flex items-center gap-3.5">
+        <div class="w-12 h-12 rounded-2xl bg-[#233560] flex items-center justify-center text-white font-black text-2xl shadow-inner">
+          💡
+        </div>
+        <div>
+          <div class="flex flex-wrap items-center gap-2">
+            <span class="text-xs uppercase tracking-wider font-extrabold bg-[#d2dfea] text-[#233560] px-3 py-0.5 rounded-full">
+              Histologia Médica • 2º Período
+            </span>
+            <span class="text-xs font-semibold text-[#883b16] bg-[#fae1ce] px-2.5 py-0.5 rounded-full flex items-center gap-1">
+              <span class="w-2 h-2 rounded-full bg-[#883b16] animate-pulse"></span>
+              Dinâmica de Sala
+            </span>
+          </div>
+          <h1 class="text-xl sm:text-2xl lg:text-3xl font-black text-[#233560] tracking-tight mt-0.5">
+            Perguntas para a Sala de Aula
+          </h1>
+          <p class="text-xs sm:text-sm text-[#4a5873] font-medium">
+            Sistema Respiratório: Transporte Mucociliar e Citologia do Epitélio Pseudoestratificado
+          </p>
+        </div>
+      </div>
+
+      <!-- Barra de Ferramentas / Controles de Sala -->
+      <div class="flex flex-wrap items-center gap-2 no-print self-end md:self-auto">
+        <!-- Temporizador 60s -->
+        <div class="bg-white/80 border border-[#cfdde4] rounded-2xl px-3 py-1.5 flex items-center gap-2 text-xs font-bold shadow-xs">
+          <span class="text-base">⏱️</span>
+          <span id="timer-display" class="font-mono text-sm font-extrabold text-[#233560]">01:00</span>
+          <button id="timer-btn" onclick="toggleTimer()" class="bg-[#233560] hover:bg-[#1b2a4d] text-white px-2 py-1 rounded-lg text-[10px] font-bold transition">
+            Iniciar
+          </button>
+          <button onclick="resetTimer()" class="text-[#64748b] hover:text-[#233560] px-1 text-[10px] font-semibold">
+            ↺
+          </button>
+        </div>
+
+        <!-- Tela Cheia -->
+        <button onclick="toggleFullscreen()" title="Alternar Modo Tela Cheia (F11)" class="bg-white/80 hover:bg-white text-[#233560] border border-[#cfdde4] p-2 rounded-2xl text-xs font-bold transition shadow-xs flex items-center gap-1.5">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V4m0 0h4M4 4l5 5m11-5h-4m4 0v4m0-4l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"/></svg>
+          <span class="hidden sm:inline">Projetar</span>
+        </button>
+
+        <!-- Ajuste de Fonte -->
+        <div class="flex items-center bg-white/80 border border-[#cfdde4] rounded-2xl p-1 shadow-xs">
+          <button onclick="changeFontSize(-1)" title="Diminuir fonte" class="w-7 h-7 flex items-center justify-center font-bold text-xs text-[#233560] hover:bg-[#cfdde4]/50 rounded-xl transition">A-</button>
+          <button onclick="changeFontSize(1)" title="Aumentar fonte" class="w-7 h-7 flex items-center justify-center font-bold text-sm text-[#233560] hover:bg-[#cfdde4]/50 rounded-xl transition">A+</button>
+        </div>
+      </div>
+    </header>
+
+    <!-- NAVEGAÇÃO ENTRE PERGUNTAS (ABAS) -->
+    <nav class="flex items-center gap-2 overflow-x-auto pb-1 no-print">
+      <button id="tab-btn-1" onclick="switchQuestion(1)" class="tab-button flex items-center gap-2.5 px-5 py-3 rounded-2xl font-bold text-sm transition-all shadow-xs bg-[#233560] text-white">
+        <span class="w-6 h-6 rounded-full bg-white/20 flex items-center justify-center text-xs font-extrabold">1</span>
+        <span>Questão 1: Transporte Mucociliar</span>
+      </button>
+
+      <button id="tab-btn-2" onclick="switchQuestion(2)" class="tab-button flex items-center gap-2.5 px-5 py-3 rounded-2xl font-bold text-sm transition-all shadow-xs bg-[#faf7ee] text-[#233560] hover:bg-white">
+        <span class="w-6 h-6 rounded-full bg-[#cfdde4] flex items-center justify-center text-xs font-extrabold text-[#233560]">2</span>
+        <span>Questão 2: Células Caliciformes</span>
+      </button>
+
+      <button id="tab-btn-all" onclick="switchQuestion('all')" class="tab-button flex items-center gap-2 px-4 py-3 rounded-2xl font-bold text-sm transition-all shadow-xs bg-[#faf7ee] text-[#233560] hover:bg-white">
+        <span>📄 Ver Ambas</span>
+      </button>
+
+      <button id="tab-btn-summary" onclick="switchQuestion('summary')" class="tab-button flex items-center gap-2 px-4 py-3 rounded-2xl font-bold text-sm transition-all shadow-xs bg-[#fae1ce] text-[#883b16] hover:bg-[#fae1ce]/80 ml-auto">
+        <span>⚡ Gabarito Resumido</span>
+      </button>
+    </nav>
+
+    <!-- ============================================================== -->
+    <!-- CARD: QUESTÃO 1                                                -->
+    <!-- ============================================================== -->
+    <section id="question-1-container" class="question-card bg-[#faf7ee] rounded-3xl p-6 sm:p-8 lg:p-10 shadow-sm border border-white/80 relative overflow-hidden transition-all">
+      
+      <!-- Topo do Card -->
+      <div class="flex flex-wrap items-center justify-between gap-3 pb-4 border-b border-[#233560]/10">
+        <div class="flex items-center gap-2">
+          <span class="bg-[#233560] text-white px-3 py-1 rounded-xl font-extrabold text-xs sm:text-sm tracking-wide">
+            QUESTÃO 1
+          </span>
+          <span class="bg-[#d2dfea] text-[#1f2d5a] px-3 py-1 rounded-xl font-bold text-xs">
+            Transporte Mucociliar &amp; Fisiopatologia
+          </span>
+        </div>
+        <div class="flex items-center gap-2">
+          <button onclick="togglePoll(1)" class="text-xs font-bold text-[#233560] bg-white px-3 py-1 rounded-xl border border-[#cfdde4] hover:bg-[#cfdde4]/30 transition flex items-center gap-1.5 no-print">
+            <span>📊</span> Votação da Sala
+          </button>
+          <button onclick="resetQuestion(1)" title="Limpar respostas e gabarito" class="text-xs text-[#64748b] hover:text-[#233560] p-1 font-semibold no-print">
+            ↺ Reiniciar
+          </button>
+        </div>
+      </div>
+
+      <!-- Enunciado -->
+      <div class="mt-6 mb-6">
+        <p class="question-text text-lg sm:text-xl lg:text-2xl font-bold text-[#233560] leading-relaxed">
+          Um paciente de 55 anos, fumante há mais de 30 anos, apresenta tosse persistente e infecções respiratórias frequentes. A análise histológica da traqueia revela <span class="bg-[#fae1ce] text-[#883b16] px-2 py-0.5 rounded-lg underline decoration-wavy decoration-[#e7a469]">redução das células ciliadas</span>. Qual é a principal consequência dessa alteração?
+        </p>
+      </div>
+
+      <!-- Votação Interativa da Turma (Painel retrátil) -->
+      <div id="poll-1" class="hidden mb-6 p-4 bg-white/70 rounded-2xl border border-[#cfdde4] text-xs">
+        <div class="flex items-center justify-between mb-2">
+          <span class="font-bold text-[#233560]">Contagem de Mãos Levantadas na Sala:</span>
+          <span id="poll-total-1" class="font-extrabold text-[#883b16]">Total: 0 votos</span>
+        </div>
+        <div class="grid grid-cols-5 gap-2 text-center">
+          <div class="p-2 rounded-xl bg-[#faf7ee]">
+            <div class="font-black text-[#233560]">A</div>
+            <div id="votes-1-A" class="text-sm font-extrabold my-1">0</div>
+            <div class="flex justify-center gap-1">
+              <button onclick="addVote(1, 'A', 1)" class="w-6 h-6 rounded bg-[#233560] text-white font-bold">+</button>
+              <button onclick="addVote(1, 'A', -1)" class="w-6 h-6 rounded bg-gray-200 text-gray-700 font-bold">-</button>
+            </div>
+          </div>
+          <div class="p-2 rounded-xl bg-[#faf7ee]">
+            <div class="font-black text-[#233560]">B</div>
+            <div id="votes-1-B" class="text-sm font-extrabold my-1">0</div>
+            <div class="flex justify-center gap-1">
+              <button onclick="addVote(1, 'B', 1)" class="w-6 h-6 rounded bg-[#233560] text-white font-bold">+</button>
+              <button onclick="addVote(1, 'B', -1)" class="w-6 h-6 rounded bg-gray-200 text-gray-700 font-bold">-</button>
+            </div>
+          </div>
+          <div class="p-2 rounded-xl bg-[#faf7ee]">
+            <div class="font-black text-[#233560]">C</div>
+            <div id="votes-1-C" class="text-sm font-extrabold my-1">0</div>
+            <div class="flex justify-center gap-1">
+              <button onclick="addVote(1, 'C', 1)" class="w-6 h-6 rounded bg-[#233560] text-white font-bold">+</button>
+              <button onclick="addVote(1, 'C', -1)" class="w-6 h-6 rounded bg-gray-200 text-gray-700 font-bold">-</button>
+            </div>
+          </div>
+          <div class="p-2 rounded-xl bg-[#faf7ee]">
+            <div class="font-black text-[#233560]">D</div>
+            <div id="votes-1-D" class="text-sm font-extrabold my-1">0</div>
+            <div class="flex justify-center gap-1">
+              <button onclick="addVote(1, 'D', 1)" class="w-6 h-6 rounded bg-[#233560] text-white font-bold">+</button>
+              <button onclick="addVote(1, 'D', -1)" class="w-6 h-6 rounded bg-gray-200 text-gray-700 font-bold">-</button>
+            </div>
+          </div>
+          <div class="p-2 rounded-xl bg-[#faf7ee]">
+            <div class="font-black text-[#233560]">E</div>
+            <div id="votes-1-E" class="text-sm font-extrabold my-1">0</div>
+            <div class="flex justify-center gap-1">
+              <button onclick="addVote(1, 'E', 1)" class="w-6 h-6 rounded bg-[#233560] text-white font-bold">+</button>
+              <button onclick="addVote(1, 'E', -1)" class="w-6 h-6 rounded bg-gray-200 text-gray-700 font-bold">-</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Alternativas A, B, C, D, E -->
+      <div class="space-y-3" id="options-group-1">
+        
+        <!-- Opção A -->
+        <button onclick="selectOption(1, 'A')" id="opt-1-A" class="option-btn w-full text-left p-4 sm:p-5 rounded-2xl bg-white border-2 border-transparent hover:border-[#8faec6] flex items-start gap-3.5 shadow-xs">
+          <span class="opt-badge w-8 h-8 rounded-xl bg-[#d2dfea] text-[#233560] font-black flex items-center justify-center shrink-0 text-sm">
+            A
+          </span>
+          <span class="option-label text-base sm:text-lg font-semibold text-[#2c3e66] pt-0.5">
+            Aumento da produção de surfactante pulmonar.
+          </span>
+        </button>
+
+        <!-- Opção B (GABARITO) -->
+        <button onclick="selectOption(1, 'B')" id="opt-1-B" class="option-btn w-full text-left p-4 sm:p-5 rounded-2xl bg-white border-2 border-transparent hover:border-[#8faec6] flex items-start gap-3.5 shadow-xs">
+          <span class="opt-badge w-8 h-8 rounded-xl bg-[#d2dfea] text-[#233560] font-black flex items-center justify-center shrink-0 text-sm">
+            B
+          </span>
+          <span class="option-label text-base sm:text-lg font-semibold text-[#2c3e66] pt-0.5">
+            Diminuição da eficiência do transporte mucociliar, favorecendo o acúmulo de muco e microrganismos.
+          </span>
+        </button>
+
+        <!-- Opção C -->
+        <button onclick="selectOption(1, 'C')" id="opt-1-C" class="option-btn w-full text-left p-4 sm:p-5 rounded-2xl bg-white border-2 border-transparent hover:border-[#8faec6] flex items-start gap-3.5 shadow-xs">
+          <span class="opt-badge w-8 h-8 rounded-xl bg-[#d2dfea] text-[#233560] font-black flex items-center justify-center shrink-0 text-sm">
+            C
+          </span>
+          <span class="option-label text-base sm:text-lg font-semibold text-[#2c3e66] pt-0.5">
+            Aumento da capacidade de realizar trocas gasosas na traqueia.
+          </span>
+        </button>
+
+        <!-- Opção D -->
+        <button onclick="selectOption(1, 'D')" id="opt-1-D" class="option-btn w-full text-left p-4 sm:p-5 rounded-2xl bg-white border-2 border-transparent hover:border-[#8faec6] flex items-start gap-3.5 shadow-xs">
+          <span class="opt-badge w-8 h-8 rounded-xl bg-[#d2dfea] text-[#233560] font-black flex items-center justify-center shrink-0 text-sm">
+            D
+          </span>
+          <span class="option-label text-base sm:text-lg font-semibold text-[#2c3e66] pt-0.5">
+            Transformação das células ciliadas em células musculares lisas.
+          </span>
+        </button>
+
+        <!-- Opção E -->
+        <button onclick="selectOption(1, 'E')" id="opt-1-E" class="option-btn w-full text-left p-4 sm:p-5 rounded-2xl bg-white border-2 border-transparent hover:border-[#8faec6] flex items-start gap-3.5 shadow-xs">
+          <span class="opt-badge w-8 h-8 rounded-xl bg-[#d2dfea] text-[#233560] font-black flex items-center justify-center shrink-0 text-sm">
+            E
+          </span>
+          <span class="option-label text-base sm:text-lg font-semibold text-[#2c3e66] pt-0.5">
+            Aumento da velocidade do movimento ciliar.
+          </span>
+        </button>
+      </div>
+
+      <!-- PAINEL DE CONTROLE DE RESPOSTA (GABARITO E JUSTIFICATIVAS) -->
+      <div class="mt-8 pt-5 border-t border-[#233560]/10 flex flex-wrap items-center justify-between gap-4 no-print">
+        <div class="flex flex-wrap items-center gap-3">
+          <!-- Botão Revelar Gabarito -->
+          <button id="reveal-btn-1" onclick="revealAnswer(1)" class="bg-[#233560] hover:bg-[#1b2a4d] text-white px-5 py-3 rounded-2xl font-bold text-sm sm:text-base flex items-center gap-2 shadow-sm transition active:scale-95">
+            <span class="text-base">👁️</span>
+            <span>Revelar Gabarito</span>
+          </button>
+
+          <!-- Botão Mostrar Justificativas (Fica Oculto por Padrão) -->
+          <button id="toggle-just-btn-1" onclick="toggleJustification(1)" class="bg-[#fae1ce] hover:bg-[#f5cfb3] text-[#883b16] border border-[#e7a469]/50 px-5 py-3 rounded-2xl font-bold text-sm sm:text-base flex items-center gap-2 transition active:scale-95">
+            <span class="text-base">📖</span>
+            <span id="just-btn-label-1">Mostrar Justificativas Detalhadas</span>
+            <svg id="chevron-1" class="w-4 h-4 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+        </div>
+
+        <div id="feedback-badge-1" class="hidden text-sm font-extrabold px-4 py-2 rounded-xl"></div>
+      </div>
+
+      <!-- ============================================================== -->
+      <!-- BLOCO DE JUSTIFICATIVAS (OCULTO POR PADRÃO)                     -->
+      <!-- ============================================================== -->
+      <div id="justification-1" class="justification-content mt-6">
+        <div class="bg-[#ffffff] rounded-2xl p-5 sm:p-7 border-2 border-[#bcd0a7] shadow-sm space-y-4">
+          <div class="flex items-center justify-between pb-3 border-b border-[#e2e8f0]">
+            <div class="flex items-center gap-2">
+              <span class="w-3 h-3 rounded-full bg-[#2d5029]"></span>
+              <h3 class="text-base sm:text-lg font-black text-[#233560]">Justificativa e Análise das Alternativas (Questão 1)</h3>
+            </div>
+            <span class="bg-[#dce7cf] text-[#2d5029] text-xs font-extrabold px-3 py-1 rounded-full">
+              Gabarito Oficial: Letra B
+            </span>
+          </div>
+
+          <div class="space-y-3 text-sm sm:text-base">
+            <!-- A -->
+            <div class="p-3.5 rounded-xl bg-red-50/70 border-l-4 border-red-400">
+              <div class="flex items-baseline gap-2">
+                <span class="font-extrabold text-red-700 text-xs sm:text-sm bg-red-100 px-2 py-0.5 rounded">A — Incorreta</span>
+                <p class="text-[#2c3e66] leading-relaxed">
+                  O surfactante é produzido principalmente pelos <strong class="text-red-900">pneumócitos tipo II</strong> nos alvéolos pulmonares, e não na traqueia. A redução das células ciliadas traqueais não afeta a síntese alveolar de surfactante.
+                </p>
+              </div>
+            </div>
+
+            <!-- B (Correta) -->
+            <div class="p-3.5 rounded-xl bg-green-50/90 border-l-4 border-green-600 shadow-xs">
+              <div class="flex items-baseline gap-2">
+                <span class="font-extrabold text-green-800 text-xs sm:text-sm bg-green-200 px-2 py-0.5 rounded">B — CORRETA</span>
+                <p class="text-[#1a3818] font-medium leading-relaxed">
+                  Os cílios do epitélio respiratório realizam batimentos metacrônicos coordenados que transportam continuamente a manta mucosa em direção à faringe (o <strong class="text-green-950 font-bold">escalador mucociliar</strong>). A diminuição das células ciliadas provocada pelas substâncias tóxicas do tabaco compromete essa depuração física, gerando <strong class="text-green-950 font-bold">estase de muco, retenção de patógenos e infecções frequentes</strong>.
+                </p>
+              </div>
+            </div>
+
+            <!-- C -->
+            <div class="p-3.5 rounded-xl bg-red-50/70 border-l-4 border-red-400">
+              <div class="flex items-baseline gap-2">
+                <span class="font-extrabold text-red-700 text-xs sm:text-sm bg-red-100 px-2 py-0.5 rounded">C — Incorreta</span>
+                <p class="text-[#2c3e66] leading-relaxed">
+                  A traqueia é um órgão estritamente da <strong class="text-red-900">porção condutora</strong> do sistema respiratório; a hematose (troca gasosa de $O_2$ e $CO_2$) ocorre exclusivamente nos alvéolos pulmonares através da barreira hematoaérea.
+                </p>
+              </div>
+            </div>
+
+            <!-- D -->
+            <div class="p-3.5 rounded-xl bg-red-50/70 border-l-4 border-red-400">
+              <div class="flex items-baseline gap-2">
+                <span class="font-extrabold text-red-700 text-xs sm:text-sm bg-red-100 px-2 py-0.5 rounded">D — Incorreta</span>
+                <p class="text-[#2c3e66] leading-relaxed">
+                  Células epiteliais ciliadas não sofrem metaplasia ou diferenciação em células musculares lisas. O tabagismo crônico pode induzir metaplasia escamosa (substituição por epitélio estratificado pavimentoso), mas não em tecido muscular.
+                </p>
+              </div>
+            </div>
+
+            <!-- E -->
+            <div class="p-3.5 rounded-xl bg-red-50/70 border-l-4 border-red-400">
+              <div class="flex items-baseline gap-2">
+                <span class="font-extrabold text-red-700 text-xs sm:text-sm bg-red-100 px-2 py-0.5 rounded">E — Incorreta</span>
+                <p class="text-[#2c3e66] leading-relaxed">
+                  A lesão e perda de cílios provocada pela fumaça tóxica do cigarro imobiliza e compromete drasticamente o transporte mucociliar, em vez de acelerá-lo.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="pt-3 border-t border-[#e2e8f0] flex items-center justify-between text-xs text-[#64748b]">
+            <span>Fundamentação: Junqueira e Carneiro (2023); Ross e Pawlina (2016)</span>
+            <button onclick="toggleJustification(1)" class="font-bold text-[#883b16] hover:underline">
+              ▲ Recolher Justificativas
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================== -->
+    <!-- CARD: QUESTÃO 2                                                -->
+    <!-- ============================================================== -->
+    <section id="question-2-container" class="question-card bg-[#faf7ee] rounded-3xl p-6 sm:p-8 lg:p-10 shadow-sm border border-white/80 relative overflow-hidden transition-all hidden">
+      
+      <!-- Topo do Card -->
+      <div class="flex flex-wrap items-center justify-between gap-3 pb-4 border-b border-[#233560]/10">
+        <div class="flex items-center gap-2">
+          <span class="bg-[#233560] text-white px-3 py-1 rounded-xl font-extrabold text-xs sm:text-sm tracking-wide">
+            QUESTÃO 2
+          </span>
+          <span class="bg-[#fae1ce] text-[#883b16] px-3 py-1 rounded-xl font-bold text-xs">
+            Células Caliciformes &amp; Secreção de Muco
+          </span>
+        </div>
+        <div class="flex items-center gap-2">
+          <button onclick="togglePoll(2)" class="text-xs font-bold text-[#233560] bg-white px-3 py-1 rounded-xl border border-[#cfdde4] hover:bg-[#cfdde4]/30 transition flex items-center gap-1.5 no-print">
+            <span>📊</span> Votação da Sala
+          </button>
+          <button onclick="resetQuestion(2)" title="Limpar respostas e gabarito" class="text-xs text-[#64748b] hover:text-[#233560] p-1 font-semibold no-print">
+            ↺ Reiniciar
+          </button>
+        </div>
+      </div>
+
+      <!-- Enunciado -->
+      <div class="mt-6 mb-6">
+        <p class="question-text text-lg sm:text-xl lg:text-2xl font-bold text-[#233560] leading-relaxed">
+          Durante uma aula prática, estudantes analisaram uma lâmina da traqueia e identificaram epitélio pseudoestratificado cilíndrico ciliado com <span class="bg-[#dce7cf] text-[#2d5029] px-2 py-0.5 rounded-lg underline decoration-wavy decoration-[#9db580]">células caliciformes</span>. Qual é a principal função dessas células?
+        </p>
+      </div>
+
+      <!-- Votação Interativa da Turma (Painel retrátil) -->
+      <div id="poll-2" class="hidden mb-6 p-4 bg-white/70 rounded-2xl border border-[#cfdde4] text-xs">
+        <div class="flex items-center justify-between mb-2">
+          <span class="font-bold text-[#233560]">Contagem de Mãos Levantadas na Sala:</span>
+          <span id="poll-total-2" class="font-extrabold text-[#883b16]">Total: 0 votos</span>
+        </div>
+        <div class="grid grid-cols-5 gap-2 text-center">
+          <div class="p-2 rounded-xl bg-[#faf7ee]">
+            <div class="font-black text-[#233560]">A</div>
+            <div id="votes-2-A" class="text-sm font-extrabold my-1">0</div>
+            <div class="flex justify-center gap-1">
+              <button onclick="addVote(2, 'A', 1)" class="w-6 h-6 rounded bg-[#233560] text-white font-bold">+</button>
+              <button onclick="addVote(2, 'A', -1)" class="w-6 h-6 rounded bg-gray-200 text-gray-700 font-bold">-</button>
+            </div>
+          </div>
+          <div class="p-2 rounded-xl bg-[#faf7ee]">
+            <div class="font-black text-[#233560]">B</div>
+            <div id="votes-2-B" class="text-sm font-extrabold my-1">0</div>
+            <div class="flex justify-center gap-1">
+              <button onclick="addVote(2, 'B', 1)" class="w-6 h-6 rounded bg-[#233560] text-white font-bold">+</button>
+              <button onclick="addVote(2, 'B', -1)" class="w-6 h-6 rounded bg-gray-200 text-gray-700 font-bold">-</button>
+            </div>
+          </div>
+          <div class="p-2 rounded-xl bg-[#faf7ee]">
+            <div class="font-black text-[#233560]">C</div>
+            <div id="votes-2-C" class="text-sm font-extrabold my-1">0</div>
+            <div class="flex justify-center gap-1">
+              <button onclick="addVote(2, 'C', 1)" class="w-6 h-6 rounded bg-[#233560] text-white font-bold">+</button>
+              <button onclick="addVote(2, 'C', -1)" class="w-6 h-6 rounded bg-gray-200 text-gray-700 font-bold">-</button>
+            </div>
+          </div>
+          <div class="p-2 rounded-xl bg-[#faf7ee]">
+            <div class="font-black text-[#233560]">D</div>
+            <div id="votes-2-D" class="text-sm font-extrabold my-1">0</div>
+            <div class="flex justify-center gap-1">
+              <button onclick="addVote(2, 'D', 1)" class="w-6 h-6 rounded bg-[#233560] text-white font-bold">+</button>
+              <button onclick="addVote(2, 'D', -1)" class="w-6 h-6 rounded bg-gray-200 text-gray-700 font-bold">-</button>
+            </div>
+          </div>
+          <div class="p-2 rounded-xl bg-[#faf7ee]">
+            <div class="font-black text-[#233560]">E</div>
+            <div id="votes-2-E" class="text-sm font-extrabold my-1">0</div>
+            <div class="flex justify-center gap-1">
+              <button onclick="addVote(2, 'E', 1)" class="w-6 h-6 rounded bg-[#233560] text-white font-bold">+</button>
+              <button onclick="addVote(2, 'E', -1)" class="w-6 h-6 rounded bg-gray-200 text-gray-700 font-bold">-</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Alternativas A, B, C, D, E -->
+      <div class="space-y-3" id="options-group-2">
+        
+        <!-- Opção A -->
+        <button onclick="selectOption(2, 'A')" id="opt-2-A" class="option-btn w-full text-left p-4 sm:p-5 rounded-2xl bg-white border-2 border-transparent hover:border-[#8faec6] flex items-start gap-3.5 shadow-xs">
+          <span class="opt-badge w-8 h-8 rounded-xl bg-[#fae1ce] text-[#883b16] font-black flex items-center justify-center shrink-0 text-sm">
+            A
+          </span>
+          <span class="option-label text-base sm:text-lg font-semibold text-[#2c3e66] pt-0.5">
+            Produzir surfactante para reduzir a tensão superficial dos alvéolos.
+          </span>
+        </button>
+
+        <!-- Opção B -->
+        <button onclick="selectOption(2, 'B')" id="opt-2-B" class="option-btn w-full text-left p-4 sm:p-5 rounded-2xl bg-white border-2 border-transparent hover:border-[#8faec6] flex items-start gap-3.5 shadow-xs">
+          <span class="opt-badge w-8 h-8 rounded-xl bg-[#fae1ce] text-[#883b16] font-black flex items-center justify-center shrink-0 text-sm">
+            B
+          </span>
+          <span class="option-label text-base sm:text-lg font-semibold text-[#2c3e66] pt-0.5">
+            Realizar contrações para controlar o diâmetro das vias aéreas.
+          </span>
+        </button>
+
+        <!-- Opção C (GABARITO) -->
+        <button onclick="selectOption(2, 'C')" id="opt-2-C" class="option-btn w-full text-left p-4 sm:p-5 rounded-2xl bg-white border-2 border-transparent hover:border-[#8faec6] flex items-start gap-3.5 shadow-xs">
+          <span class="opt-badge w-8 h-8 rounded-xl bg-[#fae1ce] text-[#883b16] font-black flex items-center justify-center shrink-0 text-sm">
+            C
+          </span>
+          <span class="option-label text-base sm:text-lg font-semibold text-[#2c3e66] pt-0.5">
+            Secretar mucinas que contribuem para a formação do muco que retém partículas e microrganismos.
+          </span>
+        </button>
+
+        <!-- Opção D -->
+        <button onclick="selectOption(2, 'D')" id="opt-2-D" class="option-btn w-full text-left p-4 sm:p-5 rounded-2xl bg-white border-2 border-transparent hover:border-[#8faec6] flex items-start gap-3.5 shadow-xs">
+          <span class="opt-badge w-8 h-8 rounded-xl bg-[#fae1ce] text-[#883b16] font-black flex items-center justify-center shrink-0 text-sm">
+            D
+          </span>
+          <span class="option-label text-base sm:text-lg font-semibold text-[#2c3e66] pt-0.5">
+            Realizar diretamente as trocas de oxigênio e dióxido de carbono.
+          </span>
+        </button>
+
+        <!-- Opção E -->
+        <button onclick="selectOption(2, 'E')" id="opt-2-E" class="option-btn w-full text-left p-4 sm:p-5 rounded-2xl bg-white border-2 border-transparent hover:border-[#8faec6] flex items-start gap-3.5 shadow-xs">
+          <span class="opt-badge w-8 h-8 rounded-xl bg-[#fae1ce] text-[#883b16] font-black flex items-center justify-center shrink-0 text-sm">
+            E
+          </span>
+          <span class="option-label text-base sm:text-lg font-semibold text-[#2c3e66] pt-0.5">
+            Produzir cartilagem hialina para sustentar a traqueia.
+          </span>
+        </button>
+      </div>
+
+      <!-- PAINEL DE CONTROLE DE RESPOSTA (GABARITO E JUSTIFICATIVAS) -->
+      <div class="mt-8 pt-5 border-t border-[#233560]/10 flex flex-wrap items-center justify-between gap-4 no-print">
+        <div class="flex flex-wrap items-center gap-3">
+          <!-- Botão Revelar Gabarito -->
+          <button id="reveal-btn-2" onclick="revealAnswer(2)" class="bg-[#233560] hover:bg-[#1b2a4d] text-white px-5 py-3 rounded-2xl font-bold text-sm sm:text-base flex items-center gap-2 shadow-sm transition active:scale-95">
+            <span class="text-base">👁️</span>
+            <span>Revelar Gabarito</span>
+          </button>
+
+          <!-- Botão Mostrar Justificativas (Fica Oculto por Padrão) -->
+          <button id="toggle-just-btn-2" onclick="toggleJustification(2)" class="bg-[#fae1ce] hover:bg-[#f5cfb3] text-[#883b16] border border-[#e7a469]/50 px-5 py-3 rounded-2xl font-bold text-sm sm:text-base flex items-center gap-2 transition active:scale-95">
+            <span class="text-base">📖</span>
+            <span id="just-btn-label-2">Mostrar Justificativas Detalhadas</span>
+            <svg id="chevron-2" class="w-4 h-4 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+        </div>
+
+        <div id="feedback-badge-2" class="hidden text-sm font-extrabold px-4 py-2 rounded-xl"></div>
+      </div>
+
+      <!-- ============================================================== -->
+      <!-- BLOCO DE JUSTIFICATIVAS (OCULTO POR PADRÃO)                     -->
+      <!-- ============================================================== -->
+      <div id="justification-2" class="justification-content mt-6">
+        <div class="bg-[#ffffff] rounded-2xl p-5 sm:p-7 border-2 border-[#bcd0a7] shadow-sm space-y-4">
+          <div class="flex items-center justify-between pb-3 border-b border-[#e2e8f0]">
+            <div class="flex items-center gap-2">
+              <span class="w-3 h-3 rounded-full bg-[#2d5029]"></span>
+              <h3 class="text-base sm:text-lg font-black text-[#233560]">Justificativa e Análise das Alternativas (Questão 2)</h3>
+            </div>
+            <span class="bg-[#dce7cf] text-[#2d5029] text-xs font-extrabold px-3 py-1 rounded-full">
+              Gabarito Oficial: Letra C
+            </span>
+          </div>
+
+          <div class="space-y-3 text-sm sm:text-base">
+            <!-- A -->
+            <div class="p-3.5 rounded-xl bg-red-50/70 border-l-4 border-red-400">
+              <div class="flex items-baseline gap-2">
+                <span class="font-extrabold text-red-700 text-xs sm:text-sm bg-red-100 px-2 py-0.5 rounded">A — Incorreta</span>
+                <p class="text-[#2c3e66] leading-relaxed">
+                  A produção de surfactante para reduzir a tensão superficial alveolar e prevenir a atelectasia é função especializada dos <strong class="text-red-900">pneumócitos tipo II</strong>, presentes no parênquima pulmonar.
+                </p>
+              </div>
+            </div>
+
+            <!-- B -->
+            <div class="p-3.5 rounded-xl bg-red-50/70 border-l-4 border-red-400">
+              <div class="flex items-baseline gap-2">
+                <span class="font-extrabold text-red-700 text-xs sm:text-sm bg-red-100 px-2 py-0.5 rounded">B — Incorreta</span>
+                <p class="text-[#2c3e66] leading-relaxed">
+                  A contração e regulação dinâmica do diâmetro das vias aéreas é realizada pelas fibras do <strong class="text-red-900">músculo liso</strong> (músculo traqueal e feixes de Reisseisen sob controle do sistema nervoso autônomo).
+                </p>
+              </div>
+            </div>
+
+            <!-- C (Correta) -->
+            <div class="p-3.5 rounded-xl bg-green-50/90 border-l-4 border-green-600 shadow-xs">
+              <div class="flex items-baseline gap-2">
+                <span class="font-extrabold text-green-800 text-xs sm:text-sm bg-green-200 px-2 py-0.5 rounded">C — CORRETA</span>
+                <p class="text-[#1a3818] font-medium leading-relaxed">
+                  As células caliciformes são glândulas exócrinas unicelulares intraepiteliais especializadas na síntese e secreção de <strong class="text-green-950 font-bold">mucinas glicoproteicas hidratadas</strong>. Essas moléculas formam a camada viscosa superficial (fase gel) do muco protetor, aprisionando partículas inaladas e microrganismos que são posteriormente removidos pela atividade ciliar.
+                </p>
+              </div>
+            </div>
+
+            <!-- D -->
+            <div class="p-3.5 rounded-xl bg-red-50/70 border-l-4 border-red-400">
+              <div class="flex items-baseline gap-2">
+                <span class="font-extrabold text-red-700 text-xs sm:text-sm bg-red-100 px-2 py-0.5 rounded">D — Incorreta</span>
+                <p class="text-[#2c3e66] leading-relaxed">
+                  A hematose (troca gasosa) ocorre exclusivamente através da <strong class="text-red-900">barreira alvéolo-capilar</strong> formada pelos pneumócitos tipo I, endotélio capilar e lâminas basais fundidas, não ocorrendo na mucosa traqueal.
+                </p>
+              </div>
+            </div>
+
+            <!-- E -->
+            <div class="p-3.5 rounded-xl bg-red-50/70 border-l-4 border-red-400">
+              <div class="flex items-baseline gap-2">
+                <span class="font-extrabold text-red-700 text-xs sm:text-sm bg-red-100 px-2 py-0.5 rounded">E — Incorreta</span>
+                <p class="text-[#2c3e66] leading-relaxed">
+                  A matriz cartilaginosa hialina que sustenta os anéis em "C" da traqueia é sintetizada e mantida exclusivamente por <strong class="text-red-900">condrócitos e condroblastos</strong> (tecido conjuntivo cartilaginoso), e não por células epiteliais caliciformes.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="pt-3 border-t border-[#e2e8f0] flex items-center justify-between text-xs text-[#64748b]">
+            <span>Fundamentação: Junqueira e Carneiro (2023); Tortora e Derrickson (2023)</span>
+            <button onclick="toggleJustification(2)" class="font-bold text-[#883b16] hover:underline">
+              ▲ Recolher Justificativas
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================== -->
+    <!-- CARD: GABARITO RESUMIDO & SÍNTESE ACADÊMICA                    -->
+    <!-- ============================================================== -->
+    <section id="summary-container" class="question-card bg-[#faf7ee] rounded-3xl p-6 sm:p-8 lg:p-10 shadow-sm border border-white/80 transition-all hidden">
+      <div class="pb-4 border-b border-[#233560]/10 flex items-center justify-between">
+        <div class="flex items-center gap-2">
+          <span class="bg-[#883b16] text-white px-3 py-1 rounded-xl font-extrabold text-xs sm:text-sm tracking-wide">
+            GABARITO CONSOLIDADO
+          </span>
+          <span class="bg-[#fae1ce] text-[#883b16] px-3 py-1 rounded-xl font-bold text-xs">
+            Resumo Oficial para Projeção
+          </span>
+        </div>
+        <button onclick="switchQuestion(1)" class="text-xs text-[#233560] font-bold bg-white px-3 py-1.5 rounded-xl border border-[#cfdde4] hover:bg-[#cfdde4]/30 transition">
+          ← Voltar para as Questões
+        </button>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
+        <!-- Card Resumo Q1 -->
+        <div class="bg-white rounded-2xl p-6 border-2 border-[#8faec6] shadow-xs space-y-3">
+          <div class="flex items-center justify-between">
+            <span class="text-xs uppercase font-extrabold text-[#233560] bg-[#d2dfea] px-3 py-1 rounded-lg">Questão 1</span>
+            <span class="text-2xl font-black text-[#2d5029] bg-[#dce7cf] w-10 h-10 rounded-xl flex items-center justify-center">B</span>
+          </div>
+          <h4 class="font-extrabold text-[#233560] text-base">Transporte Mucociliar &amp; Cílios</h4>
+          <p class="text-sm text-[#4a5873] leading-relaxed">
+            <strong>Gabarito B:</strong> A redução das células ciliadas diminui a eficiência do transporte mucociliar, favorecendo o acúmulo de muco estagnado e a proliferação bacteriana.
+          </p>
+          <div class="pt-2 text-xs text-[#883b16] font-semibold flex items-center gap-1">
+            <span>✓</span> Conceito-chave: Escalador mucociliar, dineína e desobstrução das vias aéreas.
+          </div>
+        </div>
+
+        <!-- Card Resumo Q2 -->
+        <div class="bg-white rounded-2xl p-6 border-2 border-[#e7a469] shadow-xs space-y-3">
+          <div class="flex items-center justify-between">
+            <span class="text-xs uppercase font-extrabold text-[#883b16] bg-[#fae1ce] px-3 py-1 rounded-lg">Questão 2</span>
+            <span class="text-2xl font-black text-[#2d5029] bg-[#dce7cf] w-10 h-10 rounded-xl flex items-center justify-center">C</span>
+          </div>
+          <h4 class="font-extrabold text-[#233560] text-base">Células Caliciformes &amp; Muco</h4>
+          <p class="text-sm text-[#4a5873] leading-relaxed">
+            <strong>Gabarito C:</strong> Secretar mucinas que formam o muco protetor viscoso (fase gel) para aprisionar partículas inaladas e microrganismos.
+          </p>
+          <div class="pt-2 text-xs text-[#2d5029] font-semibold flex items-center gap-1">
+            <span>✓</span> Conceito-chave: Glândula unicelular exócrina e película adesiva protetora.
+          </div>
+        </div>
+      </div>
+
+      <!-- Resumo Didático Integrador -->
+      <div class="bg-[#f0f5ee] rounded-2xl p-5 border border-[#cde0be]">
+        <h5 class="text-sm font-black text-[#2d5029] mb-1">🔗 Integração Didática Essencial: A Parceria Célula Caliciforme + Célula Ciliada</h5>
+        <p class="text-xs sm:text-sm text-[#2d5029]/90 leading-relaxed">
+          O sistema respiratório depende do equilíbrio funcional sinérgico entre as <strong>células caliciformes</strong> (que produzem a manta mucosa adesiva da fase gel) e as <strong>células ciliadas</strong> (que geram o batimento metacrônico na fase sol para transportar continuamente essa manta para a faringe). Se faltar muco, a barreira protetora falha; se faltarem cílios (ou se a dineína falhar, como no tabagismo ou na Discinesia Ciliar Primária), o muco estagna e se torna um foco infeccioso recorrente.
+        </p>
+      </div>
+    </section>
+
+    <!-- RODAPÉ DE AUTORIA E REFERÊNCIAS NORMATIVAS -->
+    <footer class="bg-[#faf7ee] rounded-3xl p-5 sm:p-6 shadow-sm border border-white/80 space-y-3 text-xs">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-[#233560]/10 pb-3">
+        <div class="font-bold text-[#233560]">
+          👥 <span class="text-[#883b16]">Autoria Discente:</span> Nicole Vaz • Júlia Maina • Laura Almeida • Eloyse • Maria Luiza Senna • Fernanda Massaro • Roger Pacheco
+        </div>
+        <div class="text-[#526075] font-semibold">
+          Componente Curricular de Histologia Médica (2º Período)
+        </div>
+      </div>
+
+      <div class="text-[#64748b] leading-relaxed">
+        <strong class="text-[#233560]">Referências Bibliográficas Exclusivas:</strong>
+        JUNQUEIRA &amp; CARNEIRO (12ª, 13ª e 14ª ed., 2013-2023); ROSS &amp; PAWLINA (7ª ed., 2016); TORTORA &amp; DERRICKSON (16ª ed., 2023); Atlas de Histologia PUCRS; Atlas de Histologia UNEB; Atlas de Histologia UFG (2020).
+      </div>
+    </footer>
+
+  </main>
+
+  <!-- ============================================================== -->
+  <!-- JAVASCRIPT DE INTERATIVIDADE, AUDIO & CONTROLES                 -->
+  <!-- ============================================================== -->
+  <script>
+    // Respostas corretas
+    const correctAnswers = { 1: 'B', 2: 'C' };
+    const userSelections = { 1: null, 2: null };
+    const votes = {
+      1: { 'A': 0, 'B': 0, 'C': 0, 'D': 0, 'E': 0 },
+      2: { 'A': 0, 'B': 0, 'C': 0, 'D': 0, 'E': 0 }
+    };
+
+    // Sintetizador de áudio Web Audio API (sem dependência externa)
+    const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    function playBeep(type) {
+      if (!audioCtx) return;
+      if (audioCtx.state === 'suspended') {
+        audioCtx.resume();
+      }
+      const osc = audioCtx.createOscillator();
+      const gain = audioCtx.createGain();
+      osc.connect(gain);
+      gain.connect(audioCtx.destination);
+
+      if (type === 'correct') {
+        osc.frequency.setValueAtTime(587.33, audioCtx.currentTime); // D5
+        osc.frequency.setValueAtTime(880, audioCtx.currentTime + 0.1); // A5
+        gain.gain.setValueAtTime(0.15, audioCtx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.35);
+        osc.start();
+        osc.stop(audioCtx.currentTime + 0.35);
+      } else if (type === 'click') {
+        osc.frequency.setValueAtTime(440, audioCtx.currentTime);
+        gain.gain.setValueAtTime(0.05, audioCtx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.08);
+        osc.start();
+        osc.stop(audioCtx.currentTime + 0.08);
+      }
+    }
+
+    // Seleção de alternativa
+    function selectOption(qNum, letter) {
+      userSelections[qNum] = letter;
+      playBeep('click');
+
+      const letters = ['A', 'B', 'C', 'D', 'E'];
+      letters.forEach(l => {
+        const btn = document.getElementById(`opt-${qNum}-${l}`);
+        const badge = btn.querySelector('.opt-badge');
+        if (l === letter) {
+          btn.classList.add('border-[#233560]', 'bg-blue-50/50');
+          btn.classList.remove('border-transparent', 'bg-white');
+          badge.classList.remove('bg-[#d2dfea]', 'bg-[#fae1ce]', 'text-[#233560]', 'text-[#883b16]');
+          badge.classList.add('bg-[#233560]', 'text-white');
+        } else {
+          btn.classList.remove('border-[#233560]', 'bg-blue-50/50');
+          btn.classList.add('border-transparent', 'bg-white');
+          badge.classList.remove('bg-[#233560]', 'text-white');
+          if (qNum === 1) {
+            badge.classList.add('bg-[#d2dfea]', 'text-[#233560]');
+          } else {
+            badge.classList.add('bg-[#fae1ce]', 'text-[#883b16]');
+          }
+        }
+      });
+    }
+
+    // Revelar resposta
+    function revealAnswer(qNum) {
+      const correct = correctAnswers[qNum];
+      const selected = userSelections[qNum];
+      const letters = ['A', 'B', 'C', 'D', 'E'];
+
+      letters.forEach(l => {
+        const btn = document.getElementById(`opt-${qNum}-${l}`);
+        const badge = btn.querySelector('.opt-badge');
+        btn.classList.remove('border-[#233560]', 'bg-blue-50/50', 'hover:border-[#8faec6]');
+
+        if (l === correct) {
+          btn.classList.remove('border-transparent', 'bg-white');
+          btn.classList.add('border-green-600', 'bg-green-50/90', 'shadow-md');
+          badge.classList.remove('bg-[#d2dfea]', 'bg-[#fae1ce]', 'bg-[#233560]', 'text-[#233560]', 'text-[#883b16]');
+          badge.classList.add('bg-green-600', 'text-white');
+          
+          if (!btn.querySelector('.correct-badge-tag')) {
+            const tag = document.createElement('span');
+            tag.className = 'correct-badge-tag ml-auto text-xs font-black text-green-800 bg-green-200 px-3 py-1 rounded-full shrink-0 flex items-center gap-1';
+            tag.innerHTML = '✓ GABARITO';
+            btn.appendChild(tag);
+          }
+        } else if (l === selected && selected !== correct) {
+          btn.classList.remove('border-transparent', 'bg-white');
+          btn.classList.add('border-red-400', 'bg-red-50/70');
+          badge.classList.remove('bg-[#d2dfea]', 'bg-[#fae1ce]', 'bg-[#233560]', 'text-[#233560]', 'text-[#883b16]');
+          badge.classList.add('bg-red-500', 'text-white');
+        } else {
+          btn.classList.add('opacity-60');
+        }
+      });
+
+      // Feedback textual
+      const feedback = document.getElementById(`feedback-badge-${qNum}`);
+      feedback.classList.remove('hidden', 'bg-green-100', 'text-green-900', 'bg-blue-100', 'text-blue-900');
+      if (selected === correct) {
+        playBeep('correct');
+        feedback.classList.add('bg-green-100', 'text-green-900');
+        feedback.innerHTML = '🎉 Resposta Correta: <strong>Alternativa ' + correct + '</strong>!';
+      } else if (selected) {
+        feedback.classList.add('bg-amber-100', 'text-amber-900');
+        feedback.innerHTML = 'Gabarito Oficial: <strong>Alternativa ' + correct + '</strong>';
+      } else {
+        feedback.classList.add('bg-[#dce7cf]', 'text-[#2d5029]');
+        feedback.innerHTML = 'Gabarito Oficial: <strong>Alternativa ' + correct + '</strong>';
+      }
+
+      // Destacar botão de justificativa
+      const justBtn = document.getElementById(`toggle-just-btn-${qNum}`);
+      justBtn.classList.add('ring-2', 'ring-[#883b16]', 'animate-pulse-subtle');
+    }
+
+    // Toggle de justificativas
+    function toggleJustification(qNum) {
+      const container = document.getElementById(`justification-${qNum}`);
+      const btn = document.getElementById(`toggle-just-btn-${qNum}`);
+      const label = document.getElementById(`just-btn-label-${qNum}`);
+      const chevron = document.getElementById(`chevron-${qNum}`);
+
+      const isOpen = container.classList.contains('open');
+
+      if (isOpen) {
+        container.classList.remove('open');
+        label.innerText = 'Mostrar Justificativas Detalhadas';
+        chevron.style.transform = 'rotate(0deg)';
+      } else {
+        container.classList.add('open');
+        label.innerText = 'Ocultar Justificativas';
+        chevron.style.transform = 'rotate(180deg)';
+        btn.classList.remove('animate-pulse-subtle', 'ring-2');
+        playBeep('click');
+      }
+    }
+
+    // Reiniciar Pergunta
+    function resetQuestion(qNum) {
+      userSelections[qNum] = null;
+      const letters = ['A', 'B', 'C', 'D', 'E'];
+      letters.forEach(l => {
+        const btn = document.getElementById(`opt-${qNum}-${l}`);
+        const badge = btn.querySelector('.opt-badge');
+        btn.className = 'option-btn w-full text-left p-4 sm:p-5 rounded-2xl bg-white border-2 border-transparent hover:border-[#8faec6] flex items-start gap-3.5 shadow-xs';
+        
+        badge.className = 'opt-badge w-8 h-8 rounded-xl font-black flex items-center justify-center shrink-0 text-sm';
+        if (qNum === 1) {
+          badge.classList.add('bg-[#d2dfea]', 'text-[#233560]');
+        } else {
+          badge.classList.add('bg-[#fae1ce]', 'text-[#883b16]');
+        }
+
+        const tag = btn.querySelector('.correct-badge-tag');
+        if (tag) tag.remove();
+      });
+
+      // Ocultar justificativas
+      const container = document.getElementById(`justification-${qNum}`);
+      container.classList.remove('open');
+      document.getElementById(`just-btn-label-${qNum}`).innerText = 'Mostrar Justificativas Detalhadas';
+      document.getElementById(`chevron-${qNum}`).style.transform = 'rotate(0deg)';
+
+      // Ocultar feedback
+      document.getElementById(`feedback-badge-${qNum}`).classList.add('hidden');
+      document.getElementById(`toggle-just-btn-${qNum}`).classList.remove('ring-2', 'animate-pulse-subtle');
+    }
+
+    // Navegação de Abas
+    function switchQuestion(target) {
+      const q1 = document.getElementById('question-1-container');
+      const q2 = document.getElementById('question-2-container');
+      const summary = document.getElementById('summary-container');
+
+      const btn1 = document.getElementById('tab-btn-1');
+      const btn2 = document.getElementById('tab-btn-2');
+      const btnAll = document.getElementById('tab-btn-all');
+      const btnSum = document.getElementById('tab-btn-summary');
+
+      [btn1, btn2, btnAll, btnSum].forEach(b => {
+        b.classList.remove('bg-[#233560]', 'text-white', 'bg-[#883b16]');
+        b.classList.add('bg-[#faf7ee]', 'text-[#233560]');
+      });
+
+      if (target === 1) {
+        q1.classList.remove('hidden');
+        q2.classList.add('hidden');
+        summary.classList.add('hidden');
+        btn1.classList.add('bg-[#233560]', 'text-white');
+        btn1.classList.remove('bg-[#faf7ee]', 'text-[#233560]');
+      } else if (target === 2) {
+        q1.classList.add('hidden');
+        q2.classList.remove('hidden');
+        summary.classList.add('hidden');
+        btn2.classList.add('bg-[#233560]', 'text-white');
+        btn2.classList.remove('bg-[#faf7ee]', 'text-[#233560]');
+      } else if (target === 'all') {
+        q1.classList.remove('hidden');
+        q2.classList.remove('hidden');
+        summary.classList.add('hidden');
+        btnAll.classList.add('bg-[#233560]', 'text-white');
+        btnAll.classList.remove('bg-[#faf7ee]', 'text-[#233560]');
+      } else if (target === 'summary') {
+        q1.classList.add('hidden');
+        q2.classList.add('hidden');
+        summary.classList.remove('hidden');
+        btnSum.classList.add('bg-[#883b16]', 'text-white');
+        btnSum.classList.remove('bg-[#fae1ce]', 'text-[#883b16]');
+      }
+    }
+
+    // Votação da Turma
+    function togglePoll(qNum) {
+      const poll = document.getElementById(`poll-${qNum}`);
+      poll.classList.toggle('hidden');
+    }
+
+    function addVote(qNum, letter, delta) {
+      votes[qNum][letter] = Math.max(0, votes[qNum][letter] + delta);
+      document.getElementById(`votes-${qNum}-${letter}`).innerText = votes[qNum][letter];
+
+      let total = 0;
+      ['A', 'B', 'C', 'D', 'E'].forEach(l => total += votes[qNum][l]);
+      document.getElementById(`poll-total-${qNum}`).innerText = `Total: ${total} votos`;
+      playBeep('click');
+    }
+
+    // Temporizador de Sala
+    let timerSeconds = 60;
+    let timerInterval = null;
+
+    function formatTime(s) {
+      const mins = Math.floor(s / 60);
+      const secs = s % 60;
+      return `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+    }
+
+    function toggleTimer() {
+      const btn = document.getElementById('timer-btn');
+      if (timerInterval) {
+        clearInterval(timerInterval);
+        timerInterval = null;
+        btn.innerText = 'Continuar';
+        btn.classList.remove('bg-amber-600');
+        btn.classList.add('bg-[#233560]');
+      } else {
+        btn.innerText = 'Pausar';
+        btn.classList.add('bg-amber-600');
+        btn.classList.remove('bg-[#233560]');
+        timerInterval = setInterval(() => {
+          if (timerSeconds > 0) {
+            timerSeconds--;
+            document.getElementById('timer-display').innerText = formatTime(timerSeconds);
+          } else {
+            clearInterval(timerInterval);
+            timerInterval = null;
+            btn.innerText = 'Finalizado';
+            playBeep('correct');
+            alert('⏰ Tempo de discussão esgotado!');
+          }
+        }, 1000);
+      }
+    }
+
+    function resetTimer() {
+      if (timerInterval) {
+        clearInterval(timerInterval);
+        timerInterval = null;
+      }
+      timerSeconds = 60;
+      document.getElementById('timer-display').innerText = formatTime(timerSeconds);
+      const btn = document.getElementById('timer-btn');
+      btn.innerText = 'Iniciar';
+      btn.classList.remove('bg-amber-600');
+      btn.classList.add('bg-[#233560]');
+    }
+
+    // Tela Cheia
+    function toggleFullscreen() {
+      if (!document.fullscreenElement) {
+        document.documentElement.requestFullscreen().catch(err => alert(err.message));
+      } else {
+        if (document.exitFullscreen) {
+          document.exitFullscreen();
+        }
+      }
+    }
+
+    // Tamanho da Fonte
+    let currentFontSizeOffset = 0;
+    function changeFontSize(delta) {
+      currentFontSizeOffset = Math.max(-2, Math.min(4, currentFontSizeOffset + delta));
+      const questions = document.querySelectorAll('.question-text');
+      const options = document.querySelectorAll('.option-label');
+      
+      questions.forEach(q => {
+        q.style.fontSize = `${1.25 + currentFontSizeOffset * 0.15}rem`;
+      });
+      options.forEach(o => {
+        o.style.fontSize = `${1.05 + currentFontSizeOffset * 0.12}rem`;
+      });
+    }
+
+    // Teclas de Atalho
+    document.addEventListener('keydown', (e) => {
+      if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+      if (e.key === '1') switchQuestion(1);
+      if (e.key === '2') switchQuestion(2);
+      if (e.key === '3' || e.key === 's' || e.key === 'S') switchQuestion('summary');
+      if (e.key === 'a' || e.key === 'A') switchQuestion('all');
+      if (e.key === 'g' || e.key === 'G') {
+        const q1Visible = !document.getElementById('question-1-container').classList.contains('hidden');
+        if (q1Visible) revealAnswer(1);
+        const q2Visible = !document.getElementById('question-2-container').classList.contains('hidden');
+        if (q2Visible) revealAnswer(2);
+      }
+      if (e.key === 'j' || e.key === 'J') {
+        const q1Visible = !document.getElementById('question-1-container').classList.contains('hidden');
+        if (q1Visible) toggleJustification(1);
+        const q2Visible = !document.getElementById('question-2-container').classList.contains('hidden');
+        if (q2Visible) toggleJustification(2);
+      }
+      if (e.key === 't' || e.key === 'T') toggleTimer();
+      if (e.key === 'f' || e.key === 'F') toggleFullscreen();
+    });
+  </script>
+</body>
+</html>

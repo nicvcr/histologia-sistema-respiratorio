@@ -70,3 +70,4 @@ O projeto foi inteiramente desenhado seguindo a paleta de cores, tipografia e os
 6. **TORTORA, Gerard J.; DERRICKSON, Bryan.** *Princípios de anatomia e fisiologia*. 16. ed. Rio de Janeiro: Guanabara Koogan, 2023. E-book. Disponível em: <https://www.grupogen.com.br/livro-principios-de-anatomia-e-fisiologia-gerard-j-tortora-e-bryan-derrickson-guanabara-koogan-9788527739351>. Acesso em: 14 nov. 2026.
 7. **UNIVERSIDADE DO ESTADO DA BAHIA (UNEB).** *Atlas de histologia e embriologia*. Salvador: UNEB, [s.d.]. Disponível em: <https://atlashistoembrio.uneb.br/histologia/>. Acesso em: 14 nov. 2026.
 8. **UNIVERSIDADE FEDERAL DE GOIÁS (UFG).** *Atlas de histologia UFG*. Goiânia: Instituto de Ciências Biológicas, 2020. Disponível em: <https://histologia.icb.ufg.br/>. Acesso em: 14 nov. 2026.
+
